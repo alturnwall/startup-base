@@ -1,0 +1,141 @@
+
+/* Home Teaser Page Specific */
+
+.page-template-page-home-teaser {
+  
+  // Layout
+
+  .public-body-container {
+    padding-top: 0;
+  }
+  .top-intro {
+    // background-color: $color-white;
+    // background-color: $color-gray-40;
+    background-color: #f9f9f9;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23d9d9d9' fill-opacity='0.61'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");;
+    background-position: 0px 0px;
+    background-repeat: repeat;
+    animation: animatedBackground 80s linear infinite;
+    padding: 6rem 0;
+    margin-top: 5rem;
+    min-height: 620px;
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    // border-bottom: 2px solid $color-gray-50;
+
+    @keyframes animatedBackground {
+      from { background-position: 0 0; }
+      to { background-position: -100% 0; }
+    }
+
+    h1, h2 {
+      position: relative;
+      z-index: 2;
+      background-color: #fff;
+      display: inline-block;
+      padding: 1.2rem 1.6rem;
+      margin: 0;
+      box-shadow: 0 0.4rem 0.4rem rgba(0,0,0,0.2);
+    }
+    h2 {
+      margin-top: -0.9rem;
+    }
+
+    svg {
+      position: absolute;
+      bottom: -3px;
+      height: 75%;
+      max-width: inherit;
+      width: auto;
+      animation: slideshow 75s linear infinite;
+      transform: translate3d(0, 0, 0);
+      z-index: 0;
+
+      @keyframes slideshow {
+        0%    { left: 0; }
+        100%  { transform: translateX(-50.6%); }
+      }
+    }
+
+    .target-out {
+      animation: pulse 2s linear infinite;
+      
+      &:nth-of-type(2n) {
+        animation-delay: 1s;
+        fill: violet;
+      }
+    }
+    @keyframes pulse {
+      0%    { r: 8.5; opacity: 0.2; }
+      30%   { r: 13.5; opacity: 0.5; }
+      31%   { r: 8.5; opacity: 0.2; }
+      100%  { r: 8.5; opacity: 0.2;}
+    }
+
+    @media only screen and (max-width: $max-mobile-width) {
+      min-height: 50vh;
+    }
+  }
+  .product-intro {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      background-color: $green-bg;
+      height: 90%;
+      width: 100%;
+      z-index: -1;
+      pointer-events: none;
+      transform: skewY(-8deg);
+    }
+  }
+
+  // Elements
+  
+  h1 {
+    font-weight: $font-weight-default;
+    font-size: $font-lg;
+  }
+
+  .signup {
+    // background-color: $green-bg;
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      background-color: $green-bg;
+      height: 150%;
+      width: 100%;
+      z-index: -1;
+      pointer-events: none;
+      transform: skewY(-8deg);
+    }
+  }
+
+  .device-box {
+    display: inline-block;
+    padding: 1rem;
+    margin: 0 0.5rem 0.5rem 0;
+    height: 14rem;
+    width: 14rem;
+    border: $border-default;
+    border-radius: $default-radius;
+    background-color: $color-white;
+    overflow: hidden;
+    
+    h6 {
+      font-weight: $font-weight-default;
+      margin-bottom: 0;
+    }
+  }
+
+  
+  
+
+}

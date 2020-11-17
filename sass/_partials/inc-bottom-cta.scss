@@ -1,0 +1,18 @@
+.bottom-cta {
+    text-align: center;
+    padding: 3rem 0;
+    background: $color-brand-dark;
+
+    p {
+        margin-bottom: 0;
+    }
+    .button {
+        font-size: 1.3rem;
+    }
+    a.learn-more {
+        display: inline-block;
+        font-weight: 700;
+        margin-left: 2rem;
+        color: $color-white;
+    }
+}

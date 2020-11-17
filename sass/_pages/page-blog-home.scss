@@ -1,0 +1,40 @@
+// scss for template: page-blog-home.scss
+
+.blog-home-feature  {
+  padding-top: 2rem;
+}
+.cover-post {
+  width: 100%;
+  padding: 1rem 0 2rem;
+  border-top: none;
+  
+  .featured-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid $color-gray-10;
+  }
+  @media (max-width: $max-mobile-width) {
+    .featured-image {
+      height: 18rem;
+    }
+  }
+}
+.blog-home-feature .text-content {
+  width: 90%;
+  padding: 1.5em 1.5em 0;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 5%;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.newsletter-signup {
+  border-top: 1px solid $color-gray-40;
+  border-bottom: 1px solid $color-gray-40;
+  padding: 1.5rem 0;
+  margin: 3rem auto;
+}

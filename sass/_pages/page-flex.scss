@@ -1,0 +1,77 @@
+// For Flex Template Styles
+// 
+// Note: it's possible that pre-scss conversion styles are missing. 
+// So, add them here if you find them!
+
+
+.flex {
+    padding: 3.5rem 0;
+    border-bottom: 1px solid $color-gray-20;
+}
+.flex-big-cta {
+    // Gets the pattern from the additional .cta-pattern class in flex-content.php
+    padding: 5rem 0;
+    border-bottom: none !important;
+    text-align: center;
+    font-family: $font-family-default;
+
+    h1, h2, h3, h4, h5 {
+        font-family: $font-family-default;
+    }
+    p {
+        opacity: 1;
+        color: $color-gray-30;
+    }
+    .button {
+        font-size: 1.2em;
+    }
+}
+.flex-enterprise {
+    overflow: hidden;
+}
+.flex h4 {
+    font-size: 1.4rem;
+    padding-top: 0.3rem;
+}
+.flex-personality .byline-photo {
+    border: 6px double #AC9F74;
+    border: 6px double $color-white;
+    margin-top: -5rem;
+}
+body.page-template-page-craft .flex {
+    background-color: $color-white;
+}
+body.page-template-page-craft .flex-video {
+    background-color: #29261A;
+    background-color: rgba(41, 38, 26, 0.5);
+    padding: 3rem 0;
+}
+body.page-template-page-craft .flex-big-cta {
+    background-color: transparent;
+}
+
+
+
+// Other
+
+.flex-form {
+    position: relative;
+  }
+  .form-section-overlay {
+    background-color: rgba(45,53,56,0.6);
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top:0;
+    bottom:0;
+  }
+  .form-section-textbox {
+    padding: 1.5rem 2rem 0.2rem;
+    width: 45%;
+    margin-left: 3%;
+    float: left;
+    position: relative;
+    z-index: 2;
+  }
+  
+  

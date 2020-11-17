@@ -1,0 +1,89 @@
+.platform-page-content {
+    overflow-x: hidden;
+
+    .hero-top-wrapper {
+        overflow: visible;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+    .hero-top-text {
+        padding-top: 7.5rem;
+    }
+    .hero-top-image-right {
+        max-width: 68%;
+        max-height: 85%;
+        position: absolute;
+        z-index: 1;
+        right: -18px;
+        bottom: -2rem;
+    }
+    .bot-map {
+        margin: 0 0 4rem;
+    }
+    .request-demo-section {
+        text-align: center;
+
+        .image-bg-content {
+            padding: 70px 0;
+        }
+    }
+    .feature-row {
+        padding-top: 40px;
+    }
+    .platform-feature-row-left {
+        padding-top: 1rem;
+        padding-right: 8%;
+        margin-bottom: 1rem;
+
+        .platform-feature-image img {
+            display: block;
+            float: left;
+            margin-left: -25px;
+        }
+    }
+    .platform-feature-row-right {
+        padding-top: 1rem;
+        padding-left: 8%;
+        margin-bottom: 1rem;
+
+        .platform-feature-image img {
+            display: block;
+            float: right;
+            margin-right: -25px;
+        }
+    }
+    .platform-feature-caption {
+        display: flex;
+        align-items: center;
+    }
+}
+.annotation {
+    margin-bottom: 1.5rem;
+
+    p {
+        margin-bottom: 0.4rem;
+    }
+    .annotation-dot {
+        display: block;
+        height: 15px;
+        width: 15px;
+        background-color: $color-white;
+        border: 4px solid $color-brand-primary;
+        border-radius: 50%;
+
+        &.blue {
+            border-color: #1989D9;
+        }
+        &.green {
+            border-color: #13C185;
+        }
+        &.gold {
+            border-color: #E6A718;
+        }
+        &.purple {
+            border-color: #DB6BD7;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+// Our theme for our sites
+.social-logos {
+  margin-bottom: 1rem;
+	a {
+    display: inline-block;
+    margin-right: 0.2rem;
+    text-decoration: none;
+    padding: 0 0.1em;
+    font-size: 1.6em;
+  }
+}
+.text-dark {
+  .social-logos {    
+    .theme-icon:before {
+      color: $color-white !important;
+    }
+  }
+}
+
+// Sharing with AddToAny Plugin
+.social-share {
+  margin: 3rem 0;
+  padding: 1rem 0;
+  border-top: $border-default;
+}

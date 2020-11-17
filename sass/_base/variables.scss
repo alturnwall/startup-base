@@ -1,0 +1,212 @@
+// Variables
+
+// Z-index
+$z-main-nav: 10;
+$z-mobile-header: 99;
+$z-public-header: 998;
+$z-mobile-nav: 998;
+$z-mobile-navbar-toggle: 999;
+
+// Breakpoints
+$min-large-desktop-width: 1200px;
+$max-desktop-width: 1199px;
+$min-desktop-width: 993px;
+$max-tablet-width: 992px;
+$min-tablet-width: 768px;
+$max-mobile-width: 767px;
+$min-mobile-width: 426px;
+$max-small-mobile-width: 425px;
+
+// Measurements
+$square: 60px;
+$global-header-height: 80px;
+
+// Grid Spacing
+$container-width: 90vw;
+$container-width-tablet: 85vw;
+$container-margin: 5vw;
+$container-max-width: 1300px;
+
+// Colors
+
+// Grayscale
+$color-white: #ffffff;
+$color-gray-10: #f2f2f2;
+$color-gray-20: #e6e6e6;
+$color-gray-30: #ccc;
+$color-gray-40: #A6A6A6;
+$color-gray-50: #8d8d8d;
+$color-gray-60: #5A5A5A;
+$color-gray-70: #4d4d4d;
+$color-gray-80: #333333;
+$color-gray-90: #272727;
+$black: #000000;
+
+$color-bluegray-10: #f0f2f3;
+
+
+// Red
+$lighter-red: #ee6e65;
+$red: #ee5252;
+
+// Orange
+$orange: #F49C57;
+
+// Yellow-Orange
+$yellow-10: #f5e6c7;
+$yellow-20: #F1D59F;
+$yellow-orange: #f7c870;
+
+// Green
+$green-yellow: #71ba6d;
+$green: #0fd599;
+$green-bg: #E6FAEF;
+
+// Teal
+$color-teal: #14a28a;
+
+// Blue
+$pale-blue: #f1f8fa;
+$pale-blue-green: #F7FBFC;
+$blue: #2C9BCE;
+$blue-05: #f1f8fa;
+$blue-10: #dbebf0;
+$blue-20: #cce1e7;
+$blue-50: #157F9D;
+$blue-70: #002450;
+$light-blue: lighten($blue, 15%);
+
+
+//
+// Theme and Reserved Colors
+//
+
+$color-text-default: $color-gray-90;
+$color-text-muted: $color-gray-60;
+$color-text-light: $color-gray-50;
+
+$color-dark-text-default: $color-white;
+$color-dark-text-muted: $color-gray-30;
+$color-dark-text-light: $color-gray-50;
+
+$color-brand-primary: #0FA041;
+$color-brand-primary-highlight: #00D179;
+$color-brand-primary-bright: #00D179;
+$color-brand-primary-dark: #09401C;
+
+$color-brand-secondary: #32D28F;
+
+$color-brand-dark: $color-gray-80;
+$color-brand-darker: $color-gray-90;
+
+$color-error: $red;
+
+
+
+
+// Fonts
+$font-family-default: 'Libre Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-secondary: 'Source Serif Pro', 'Times New Roman', Times, serif;
+$font-family-tertiary: $font-family-default;
+
+
+// Utility Sizing
+$s-xm: 0.5rem;
+$s-sm: 1rem;
+$s-md: 2rem;
+$s-lg: 3rem;
+$s-xl: 4rem;
+$s-2xl: 5rem;
+$s-3xl: 6rem;
+$s-4xl: 7rem;
+
+// Type Sizing
+$font-xs: 1rem;
+$font-sm: 1.2rem;
+$font-md: 1.5rem;
+$font-lg: 1.8rem;
+$font-xl: 2.6rem;
+$font-2xl: 3.4rem;
+$font-3xl: 4.2rem;
+$font-4xl: 5.5rem;
+
+$font-weight-default: 500;
+$font-weight-bold: 700;
+
+
+
+// Box Shadows
+$shadow-light: 0 0.2rem 0.65rem rgba(53, 63, 74, 0.1);
+$shadow-base: 0 0.2rem 0.4rem rgba(0,0,0,0.2);
+$shadow-one: 0 0 0.5rem rgba(0,0,0,0.1), 0 0.5rem 1.0rem rgba(0,0,0,0.1);
+$shadow-two: 0 0 0.5rem rgba(0,0,0,0.1), 0 0.7rem 1.5rem rgba(0,0,0,0.4);
+
+
+// Shapes
+$default-radius: 4px;
+$form-radius: 4px;
+
+// Borders
+$border-light: 1px solid $color-gray-30;
+$border-default: 1px solid $color-text-default;
+$border-md: 1px solid $color-text-default;
+$border-lg: 4px solid $color-text-default;
+
+// Buttons
+$button-radius: 4rem;
+$button-padding: 0.9rem 1.7rem;
+
+
+// Base Mixins to speed up cross-browser issues
+
+@mixin transition($args) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+@mixin scale($args) {
+    -webkit-transform: scale($args);
+    -moz-transform: scale($args);
+    -ms-transform: scale($args);
+    -o-transform: scale($args);
+    transform: scale($args);
+}
+@mixin transform($args) {
+    -webkit-transform: $args;
+    -moz-transform: $args;
+    -ms-transform: $args;
+    -o-transform: $args;
+    transform: $args;
+}
+@mixin placeholder($color) {
+    ::-webkit-input-placeholder {
+        color: $color;
+    }
+    ::-moz-placeholder {
+        color: $color;
+    }
+    :-ms-input-placeholder {
+        color: $color;
+    }
+    :-moz-placeholder {
+        color: $color;
+    }
+}
+
+// Reusable Transitions to be used as-is, without arguments
+// These should likely make use of the base mixins above
+
+@mixin default-transition {
+    @include transition(all 0.4s ease);
+}
+@mixin input-transition {
+    @include transition(all 0.2s ease-in);
+}

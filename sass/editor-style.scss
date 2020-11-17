@@ -1,0 +1,53 @@
+/* styles for the editor */
+
+@import "_base/variables.scss";
+
+h1, h2, h3, h4, h5 {
+    font-family: $font-family-secondary;
+}
+h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+}
+.intro {
+    font-size: 1.6em;
+    line-height: 145%;
+    color: $color-gray-60;
+    margin-bottom: 1em;
+}
+.mce-pullquote {
+    font-family: $font-family-default;
+    font-size: 1.3em;
+    color: #1A1A1A;
+    margin: 1.3em 0em;
+}
+.mce-quote-background {
+    margin: 2em 0;
+    font-size: 1.4em !important;
+    padding: 1.25em 1.5em;
+    background-color: $color-gray-70;
+    color: $color-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.mce-alert-warning {
+    background-color: #FDD8A4;
+    color: #747474;
+    padding: 1rem;
+    font-size: 0.9em !important;
+}
+.button {
+    padding: 0.8em 1.1em 0.6em;
+    text-decoration: none;
+    background-color: $color-brand-primary;
+    color: $color-white;
+    border-radius: 2px;
+    background-color: transparent;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 1.1em;
+    line-height: 100%;
+    font-family: $font-family-default;
+}

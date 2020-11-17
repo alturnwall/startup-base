@@ -1,0 +1,33 @@
+article.hentry {
+  border-top: $border-md;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+
+  .post-categories {
+    p {
+      margin-bottom: 0;
+    }
+  }
+  h4 {
+    font-size: $font-xl;
+    
+    a {
+      background-size: 100% 0.0em;
+
+      &:hover {
+        background-size: 100% 88%;
+      }
+    }
+  }
+  p {
+    font-size: $font-sm;
+  }
+  .post-thumb {
+    background-color: $color-brand-primary-bright;
+
+    img {
+      filter: grayscale(100%);
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.section-enterprise-dashboard  {
+    background: linear-gradient(
+                94deg, 
+                rgba($blue-gray-80, 1) 0%, 
+                rgba($blue-gray-70, 1) 45%, 
+                rgba($blue-gray-60, 1) 100%);
+
+    h6 {
+        color: $color-white !important;
+        opacity: 0.5;
+    }
+    .button-secondary {
+        margin-top: 0.8rem;
+        float: left;
+    }
+    .ent-laptop {
+        right: -3.8rem;
+        @include transition(all 0.4s ease);
+    }
+    &:hover {
+        .ent-laptop {
+            right: -2.0rem;
+        }
+    }
+    @media (max-width: $max-mobile-width) {
+        .text {
+            padding-left: 9%;
+            padding-right: 9%;
+        }
+    }
+}

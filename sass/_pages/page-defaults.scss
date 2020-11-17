@@ -1,0 +1,31 @@
+
+// WordPress Block Editor
+// Maybe need to abstract if we use block editor elsewhere.
+
+.page-default {
+    min-height: 45vh;
+
+    .wp-block-columns {
+        width: $container-width;
+        margin: 0 auto;
+        max-width: $container-max-width;
+    }
+    .wp-block-media-text .wp-block-media-text__content {
+        padding: 0 $container-margin;
+    }
+
+    .wp-block-separator {
+        width: $container-width;
+        margin: 2rem auto;
+        max-width: $container-max-width;
+    }
+}
+
+// General Block Editor Overrides
+
+.has-large-font-size {
+    font-size: $font-lg;
+}
+.has-huge-font-size {
+    font-size: $font-xl;
+}

@@ -1,0 +1,11 @@
+*.DS_Store
+
+# theme-specific files
+.vscode/
+.sass-cache/
+editor-style.css.map
+node_modules/
+package-lock.json
+style.css.map
+.DS_Store
+*.sql

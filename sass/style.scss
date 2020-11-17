@@ -1,0 +1,49 @@
+/*
+Theme Name: Startup Base
+Theme URI: https://github.com/alturnwall/startup-base
+Author: Alex Turnwall
+Author URI: https://www.turnwall.com
+Description: "Startup Base" is a base theme for creating new WordPress websites or themes.
+Version: 0.1
+License: GNU General Public License
+License URI: license.txt
+Tags: Startups
+*/
+
+@import "_base/variables.scss";
+
+// Base Files (required on every page)
+@import "_base/reset.scss";
+@import "_base/fonts.scss";
+@import "_base/footer.scss";
+@import "_base/forms.scss";
+@import "_base/grids.scss";
+@import "_base/type.scss";
+@import "_base/buttons.scss";
+@import "_base/modals.scss";
+@import "_base/nav-footer.scss";
+@import "_base/nav-main.scss";
+@import "_base/utility.scss";
+
+// Optional Partials (specific code blocks)
+@import "_partials/_helpers.scss";
+@import "_partials/content-archivepost.scss";
+@import "_partials/inc-bottom-cta.scss";
+@import "_partials/inc-mailchimp-forms.scss";
+@import "_partials/inc-social-logos.scss";
+@import "_partials/snippet-alert-banner.scss";
+@import "_partials/wp-pagenavi.scss";
+
+// Specific Pages
+@import "_pages/page-about.scss";
+@import "_pages/page-blog-home.scss";
+@import "_pages/page-blog-section.scss";
+@import "_pages/page-defaults.scss";
+// @import "_pages/page-flex.scss";
+// @import "_pages/page-home-teaser.scss";
+// @import "_pages/page-home.scss";
+// @import "_pages/page-product-dashboard.scss";
+// @import "_pages/page-product-tempsensor.scss";
+// @import "_pages/page-resources.scss";
+// @import "_pages/single-case-study.scss";
+@import "_pages/single.scss";

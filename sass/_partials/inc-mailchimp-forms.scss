@@ -1,0 +1,55 @@
+// This applies to all MailChimp Embed Forms
+
+#mc_embed_signup {
+
+  .mc-field-group {
+    padding-bottom: 1rem;
+  }
+  div.mce_inline_error {
+    font-size: $font-sm;
+    font-weight: $font-weight-default !important;
+    background-color: transparent !important;
+    color: $color-error !important;
+    padding: 0.2rem 0 !important;
+    margin: 0 !important;
+  }
+  input.mce_inline_error {
+    border-color: $color-error !important;
+  }
+}
+
+// Validation
+#mce-responses {
+  padding: 1rem 0;
+  width: 100%;
+
+  a {
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+}
+#mce-success-response {
+  color: $color-brand-primary-bright !important;
+  &:after {
+    content:" We'll be in touch soon.";
+  }
+}
+#mce-error-response {
+  color: $color-error !important;
+}
+
+// Specifically for the single email signup form
+.form-row-h {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+
+  .mc-field-group {
+    flex: 1;
+    margin-right: 1rem;
+  }
+  button, html input[type=button], input[type=reset], input[type=submit] {
+    margin-top: 0;
+    flex: 0;
+  }
+}

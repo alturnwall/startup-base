@@ -1,0 +1,93 @@
+.page-template-page-product-dashboard {
+
+  img {
+    position: relative;
+  }
+
+  .sticky-in-page {
+    background-color: $color-white;
+    // position: sticky;
+    z-index: 99;
+    top: 0;
+    border-bottom: $border-light;
+    padding: 0.5rem 0;
+  }
+
+  nav.in-page {
+    // display: flex;
+    padding-top: 0.2em;
+    margin-left: -1.3rem;
+
+    a.button {
+      background-color: transparent;
+      font-weight: $font-weight-default;
+      color: $color-text-muted;
+      font-size: 0.85em;
+
+      &:hover {
+        background-color: transparentize($color-gray-50, 0.93);
+        color: darken($color-text-muted, 20%);
+      }
+      &.active {
+        background-color: transparentize($color-gray-50, 0.8);
+        color: $color-text-default;
+      }
+    }
+  }
+
+  .monitoring-copy {
+    position: relative;
+    z-index: 2;
+  }
+  .monitoring-devices {
+    margin-left: $container-margin;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+    align-items: flex-end;
+    margin-top: -4rem;
+  }
+
+  #remote-control {
+    .a1 {
+      img {
+        float: right;
+        width: 450px;
+        max-width: 100%;
+        z-index: 1;
+      }
+    }
+    .a2 {
+      img {
+        width: 350px;
+        max-width: 100%;
+        margin-top: -15rem;
+        z-index: 2;
+        
+        @media (max-width: $max-tablet-width) {
+          margin-top: 0;
+        }
+      }
+    }
+    .a3 {
+      img {
+        float: right;
+        width: 600px;
+        max-width: 100%;
+        margin-top: -9rem;
+        z-index: 3;
+
+        @media (max-width: $max-tablet-width) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  #experience {
+
+  }
+
+
+}

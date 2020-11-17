@@ -1,0 +1,77 @@
+.partners-page-content {
+
+    .case-study-gallery {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    #featured-story {
+        max-width: 1000px;
+        margin: auto;
+
+        span.button {
+            margin-top: 3rem;
+        }
+
+        .stat-container {
+            margin: 3em 0 1em 0;
+            text-align: center;
+            display: flex;
+
+            .stat-number {
+                font-size: 50px;
+                display: block;
+            }
+
+            .stat-caption {
+                font-size: 20px;
+                margin: 0px;
+            }
+
+            @media only screen and (max-width: $max-tablet-width) {
+                flex-direction: column;
+
+                .stat-entry {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &> .row > div {
+            margin: auto;
+        }
+    }
+    
+    blockquote {
+        padding: 6.0rem 1.8rem 3.0rem 1.8rem;
+        margin-bottom: 2rem;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        z-index: 1;
+
+        margin-left: 15%;
+        margin-right: 5%;
+
+        @media only screen and (max-width: $max-mobile-width) {
+            padding: 0px;
+        }
+
+        p {
+            color: $color-brand-dark;
+            font-family: $font-family-secondary;
+        }
+
+        &:before {
+            content: url('./images/quote-chat-bubble.png');
+            position: absolute;
+            z-index: -1;
+            margin-top: -10%;
+            margin-left: -20%;
+
+            @media only screen and (max-width: $max-mobile-width) {
+                margin-left: -25%;
+            }
+        }
+    }
+}

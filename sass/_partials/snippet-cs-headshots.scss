@@ -1,0 +1,68 @@
+.cs-member{
+    text-align: center;
+    line-height: 130%;
+    max-width: 100px;
+    display: inline-block;
+    padding: .5em .75em;
+    vertical-align: top;
+
+    &.popover-contain {
+        position: relative;
+        cursor: pointer;
+
+        &:hover .popover {
+            display: block;
+
+            @media only screen and (max-width: $max-tablet-width) {
+                display: none;
+            }
+        }
+    }
+    h6 {
+        text-align: center;
+        line-height: 130%;
+        font-size: 0.7em;
+        color: $color-gray-50;
+    }
+    .popover {
+        position: absolute;
+        left:-10em;
+        top: 94%;
+        margin-left: 50%;
+        background-color: $color-white;
+        width: 20em;
+        border: 1px solid $color-gray-10;
+        border-radius: 1%;
+        padding: 10px;
+        z-index: 1;
+        -webkit-box-shadow: 3px 5px 11px 2px rgba(0,0,0,0.05);
+        -moz-box-shadow: 3px 5px 11px 2px rgba(0,0,0,0.05);
+        box-shadow: 3px 5px 11px 2px rgba(0,0,0,0.05);
+        display: none;
+
+        .popover-body{
+            padding: 3%;
+            text-align: left;
+
+            h6 {
+                text-align: left;
+                line-height: 130%;
+                font-size: .8em;
+            }
+        }
+    }
+    .image-crop{
+        width: 80px;
+        height: 80px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        
+        img {
+            display: inline;
+            margin: 0 auto;
+            height: auto;
+            width: 100%;
+        }
+    }
+}

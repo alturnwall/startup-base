@@ -1,0 +1,66 @@
+
+/* Start the Alert Banner */
+.sitewide-alert-banner {
+  width: 100%;
+  height: auto;
+  background-color: #0077b5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  padding: 0.9rem 4rem;
+  
+  @media only screen and (max-width: 992px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding-left: 1rem;
+    box-shadow: 0 -3px 16px rgba(0,0,0,0.5);
+  }
+  &[data-alertstate="hidden"] {
+    display: none;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #0480c4;
+  }
+  .close-alert-banner {
+    color: #fff;
+    position: absolute;
+    display: block;
+    right: 0;
+    text-decoration: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.8rem 1.0rem; 
+    opacity: 0.6;
+    
+    &:hover {
+      opacity: 1;
+      // background-color: #0077b5;
+    }
+  }
+  .alert-banner-title {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  .alert-banner-text {
+    opacity: 0.7;
+  }
+  .bevico-arrow-forward {
+    font-size: 1.4rem;
+    vertical-align: text-bottom;
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+  }
+}

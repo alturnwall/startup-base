@@ -1,0 +1,43 @@
+.case-study-feature {
+
+    .case-study-preview {
+        height: auto;
+
+        a.case-study-read-more {
+            color: $color-teal;
+            border-top: none;
+            border-bottom: 1px solid $color-teal;
+            margin-top: 40px;
+            padding-top: 0;
+            padding-bottom: 8px;
+        }
+    }
+    .case-study-feature-stats {
+        margin-bottom: 30px;
+        
+        .stat-column {
+            padding: 0 10px;
+            text-align: center;
+
+            span.stat-number {
+                color: $color-white;
+                font-size: 35px;
+            }
+
+            p.stat-caption {
+                color: $color-white;
+                font-size: 14px;
+                font-weight: 500;
+                padding-top: 10px;
+            }
+        }
+    }
+  .quote {
+      margin-bottom: 10px;
+  }
+
+  .button.case-study-feature-cta {
+      margin-top: 30px;
+      color: $color-white;
+  }
+}

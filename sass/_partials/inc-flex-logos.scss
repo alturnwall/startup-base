@@ -1,0 +1,44 @@
+.flex-logos {
+    padding: 3rem 0 3rem;
+    border-bottom: 1px solid $color-gray-20;
+
+    h6 {
+        display: inline;
+        margin-bottom: 0;
+        padding-right: 2rem;
+        
+        @media (max-width: $max-tablet-width) {
+            display: block;
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 1em;
+        }
+    }
+    .logos-contain {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $max-small-mobile-width) {
+            flex-wrap: wrap;
+        }
+    }
+    .flex-logo {
+        flex-basis: 16%;
+        padding: 0 1.8rem;
+        filter: grayscale(100%);
+
+        @media (max-width: $max-mobile-width) {
+            flex-basis: 33%;
+            padding: 0 1rem;
+            max-width: 33%;
+        }
+        @media (max-width: $max-small-mobile-width) {
+            padding: 0.3rem 1.4rem;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

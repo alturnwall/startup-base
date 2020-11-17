@@ -1,0 +1,52 @@
+
+// A place to put helpers that appear on multiple pages
+
+
+// Logo reusable
+a.brand-logo {
+  font-size: $font-md;
+  text-decoration: none;
+  display: inline-flex;
+  transition: all 0.2s ease;
+  color: $color-text-default;
+  line-height: 1;
+  align-items: center;
+  padding: 0;
+  letter-spacing: -0.02em;
+  // font-weight: $font-weight-bold;
+  
+  .cplogo {
+    width: 1.1em;
+    margin-top: 0.1em;
+    margin-right: 0.6em;
+    path {
+      fill: $color-text-default;
+    }
+  }
+}
+.text-dark {
+  a.brand-logo {
+    color: $color-dark-text-default;
+    .cplogo {
+      path {
+        fill: $color-dark-text-default;
+      }
+    }
+  }
+}
+
+
+// TODO
+// This goes on bottom of product pages in "also interested in" section
+// Should be componentized better
+.crop-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 180px;
+
+  .sensor {
+    width: 80%;
+  }
+}

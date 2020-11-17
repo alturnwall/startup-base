@@ -1,0 +1,90 @@
+footer {
+  background-color: $color-gray-90;
+  padding: 4rem 0;
+
+  .footer-head {
+    margin-bottom: 3rem;
+  }
+  .signup-form {
+    width: 100%;
+    padding: 1rem;
+    border-radius: $default-radius;
+    background-color: $blue-10;
+  }
+  p {
+    color: rgba($color-white, 0.8);
+  }
+  ul.menu {
+    list-style-type: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+
+    // All default link styling
+    li {
+      margin: 0;
+      
+      a {
+        font-family: $font-family-default;
+        font-size: 1rem;
+        color: $color-white;
+        text-decoration: none;
+        width: 100%;
+        padding: 0.15rem 0;
+        display: inline-block;
+      }
+      // regular sub menus
+      ul {
+        display: block;
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        top: auto; 
+        padding: 0;
+        list-style-type: none;
+        width: 100%;
+        margin: 0 0 1rem 0;
+        
+        li {
+          width: 100%;
+          
+          a {
+            color: rgba($color-white, 0.8);
+          }
+        }
+      }
+    }
+    
+    // specific top-level nav only
+    & > li {
+      flex: 0 0 25%;
+      
+      & > a {
+        font-weight: 700;
+        padding-top: 0;
+      }
+    }
+      
+  }
+  .footer-sub {
+    margin-top: 2rem;
+    border-top: 1px solid $color-gray-70;
+    padding-top: 2rem;
+
+    p {
+      color: rgba($color-white, 0.6);
+    }
+  }
+  .social-logos {  
+    margin-top: 1rem;
+    
+    a  {
+      font-size: 1.8em;
+      opacity: 0.7;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

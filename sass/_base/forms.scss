@@ -1,0 +1,65 @@
+form {
+  label {
+    color: $color-text-muted;
+    font-size: $font-sm;
+    display: inline-block;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    &.style-row {
+      li {
+        display: inline-block;
+        padding: 0.3rem 1rem 0.3rem 0;
+        margin: 0;
+        
+        label {
+          color: $color-text-default;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Dark Theme
+// Note that "submits" are styled in buttons.scss
+.text-dark form {
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  textarea {
+    color: $color-dark-text-muted;
+    border: 1px solid $color-gray-50;
+    background-color: transparentize(
+      $color-gray-90, 0.1
+    );
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  textarea:focus {
+    color: $color-dark-text-default;
+  }
+}
+
+// Adding reCAPTCHA requirements to Contact Form 7 forms automatically
+// https://developers.google.com/recaptcha/docs/faq
+
+.grecaptcha-badge { 
+  visibility: hidden; 
+}
+form.wpcf7-form {
+  .grecaptcha-message {
+    font-size: 0.7em;
+    opacity: 0.7;
+  }
+  // &:after {
+  //   content: 'This site is protected by reCAPTCHA and the Google \003Ca href="https://policies.google.com/privacy" \003E Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.'
+  // }
+}

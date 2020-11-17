@@ -1,0 +1,1 @@
+<a class="number_link" href="tel:12345678989" target="_blank" style="white-space:nowrap;">1-234-567-8989</a>

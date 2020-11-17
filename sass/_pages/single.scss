@@ -1,0 +1,299 @@
+// Start to collect styles specifically for single posts.
+
+/* Nav Below */
+#nav-below {
+    width: 100%;
+    border-top: $border-default;
+    border-bottom: $border-default;
+    margin: 2rem 0 0;
+    padding: 1em 0;
+    display: flex;
+}
+#nav-below a {
+    text-decoration:none;
+    display:block;
+    padding: 30px 10%;
+    line-height: 105%;
+}
+#nav-below a:hover {
+    background-color: #fdfdfd;
+}
+#nav-below a span.meta-nav {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    display: block;
+    color: #999;
+    padding-bottom: 8px;
+    }
+
+
+
+/* Comments */
+
+.comments-area {
+    padding: 0;
+      width: 100%;
+      border-top:1px solid #DADADA;
+      border-bottom:1px solid #DADADA;
+      margin: 1rem 0;
+    }
+    .comments-head {
+      width: 100%;
+      display: block;
+      text-align: center;
+      color: #7F7F7F;
+      padding: 1.3rem 0 1rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    .arrow-contain {
+      position: relative;
+      margin-left: 1rem;
+      font-size: 1.2rem;
+    }
+    .comments-head .bevico-arrow-forward {
+      position: absolute;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+    .open .comments-head .bevico-arrow-forward {
+      position: absolute;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+    .comment-contain {
+      display: none;
+      overflow: hidden;
+      border-top:1px solid #DADADA;
+      padding: 3rem 0;
+      background-color: #F5F5F5;
+    }
+    .comment-respond {
+    float: left;
+    width: 96%;
+    margin: 0 0 20px;
+    position: relative;
+    }
+    h4.comments-title {
+    padding-top:10px;
+    }
+    ol.comment-list {
+    float:left;
+    width:100%;
+    list-style:none;
+    }
+    ol.comment-list ol,
+    ol.comment-list ul {
+    list-style:none;
+    }
+    li.comment {
+    float:left;
+    width:100%;
+    border-top: .2em solid #666;
+    padding:16px 0;
+    font-size:100%;
+      margin-bottom: 2em;
+      position: relative;
+    }
+    li.bypostauthor {
+    border-top: 2px solid #F15249;
+    }
+    .comment-meta {
+    width:20%;
+    float:right;
+      background-color:transparent;
+      border-top:none;
+    }
+    .comment-meta cite.fn {
+    font-style:normal;
+    font-weight:bold;
+      font-size:1.05em;
+      display: block;
+      color:#666;
+    }
+    .comment-meta cite.fn a {
+    text-decoration:none;
+    }
+    .comment-metadata a.comment-edit-link {
+      text-decoration:underline;
+      display:block;
+    }
+    .says {
+    display:none;
+    }
+    .comment-metadata {
+    font-size:98%;
+    line-height:140%;
+    color:#999;
+    margin-bottom:10px;
+    }
+    .comment-metadata a {
+    color:#999;
+    text-decoration:none;
+    }
+    .comment-content {
+    width:70%;
+    float:left;
+    }
+    .comment-content p {
+    font-size:1.0em;
+    line-height:140%;
+      padding-right:1.8em;
+    }
+    p.comment-awaiting-moderation {
+    font-size:0.9em;
+    line-height:110%;
+    float:left;
+    padding:4px 8px;
+    margin:10px 0;
+    display:block;
+    border-radius:3px;
+    color:#fff;
+    }
+
+
+    a.comment-reply-link {
+        font-size: 88%;
+        color: #fff;
+        background-color: #999;
+          padding: .4em .75em .55em;
+        display: block;
+        float: left;
+        text-decoration: none;
+        border-radius: 2px;
+        
+        }
+        a.comment-reply-link:hover {
+        background-color: #666;
+        }
+        h3.comment-reply-title {
+        float:left;
+        width:40%;
+        margin:0;
+        height:56px;
+          font-size: 2em;
+          color: rgb(75,75,75);
+        }
+        a#cancel-comment-reply-link {
+        float:left;
+        font-size:50%;
+        color:#fff;
+        border-radius:3px;
+        padding:2px 15px;
+        position:absolute;
+        top:5px;
+        right:5px;
+        background-color:#333;
+        text-decoration:none;
+        }
+        p.comment-notes {
+        float:right;
+        font-size:0.9em;
+        color:#999;
+        width:55%;
+        text-align:right;
+        height:60px;
+        margin:0;
+        }
+        .comments-area label {
+        font-size:0.8em;
+        color:#CCC;
+        width:20%;
+        overflow:hidden;
+        }
+        p.comment-form-author {
+        float:left;
+        display:block;
+        margin:0 1% 6px 0;
+        background-color:#FFF;
+        padding:2px 1%;
+        width:63%;
+        clear:both;
+        }
+        p.comment-form-author label {
+        width:10%;
+        overflow:hidden;
+        }
+        p.comment-form-author input {
+        width:89%;
+        border:none;
+        margin:0;
+        padding:3px 0;
+        float:right;
+        }
+        p.comment-form-email {
+        clear:left;
+        }
+        p.comment-form-email,
+        p.comment-form-url {
+        float:left;
+        display:block;
+        margin:0 1% 6px 0;
+        background-color:#FFF;
+        padding:2px 1%;
+        width:30%;
+        }
+        .comment-form-email input,
+        .comment-form-url input {
+        border:none;
+        margin:0;
+        padding:3px 0;
+        width:76%;
+        float:right;
+        }
+        .comment-form-comment {
+        width:63%;
+        float:left;
+        display:block;
+        background-color:#FFF;
+        padding:2px 1%;
+        height:140px;
+        }
+        .comment-form-comment textarea {
+        border:none;
+        width:100%;
+        float:left;
+        height:70%;
+        }
+        .form-allowed-tags {
+        display: none;
+        overflow: hidden;
+        font-size: 0.9em;
+        line-height: 110%;
+        float: right;
+        width: 33%;
+        padding: 0;
+        margin: 0 0 10px;
+        color: #9D9D9D;
+        }
+        .form-allowed-tags code {
+        font-size:0.9em;
+        }
+        .comment-respond .form-submit {
+        float:right;
+        padding:0;
+        margin:0;
+        width:32%;
+        }
+        .comment-respond .form-submit input {
+        padding:20px 0;
+        margin:0;
+        width:100%;
+        background-color:#666;
+        font-size:1.0em;
+        }
+        #respond .comment-form-padder {
+          padding: 0;
+        }
+        #respond .comment-form-fields p.comment-form-posting-a {
+          padding-top: 6px;
+        }
+        
+        
+        /* End Comments */

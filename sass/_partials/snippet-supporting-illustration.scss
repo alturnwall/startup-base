@@ -1,0 +1,39 @@
+.supporting-illustration {
+    position: absolute;
+    z-index: 0;
+    width: 40px;
+    height: auto;
+    pointer-events: none;
+
+    path {
+        fill: $blue-50;
+    }
+
+    &.bar-spoon {
+        width: 40px;
+    }
+    &.mixing-glass {
+        width: 125px;
+    }
+    &.rolling-pin {
+        width: 400px;
+    }
+    &.saute-pan {
+        width: 400px;
+    }
+    &.spatula {
+        width: 115px;
+    }
+    &.spout {
+        width: 65px;
+    }
+    &.strainer {
+        width: 155px;
+    }
+    &.whisk {
+        width: 180px;
+    }
+    &.wine-key {
+        width: 200px;
+    }
+}

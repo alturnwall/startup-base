@@ -1,0 +1,164 @@
+// Button 
+
+.button,
+button,
+.menu li.has-button a,
+.public-navbar-main li.current-menu-item.has-button > a, 
+.public-navbar-main li.current-menu-ancestor.has-button > a,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  background-image: none;
+  font-size: $font-md;
+  text-decoration: none;
+  font-weight: $font-weight-bold;
+  border-radius: $button-radius;
+  padding: $button-padding;
+  border: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include input-transition();
+  // Colors
+  background-color: transparentize($color-gray-50, 0.4);
+  color: $color-text-default;
+
+  &:hover {
+    background-color: transparentize($color-gray-50, 0.4);
+    color: darken($color-text-default, 50%);
+    text-decoration: none;
+    background-image: none;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  // Primary Variant
+  // With Primary
+  &.primary {
+    background-color: $color-brand-primary;
+    color: $color-white;
+    
+    &:hover {
+      background-color: darken($color-brand-primary, 10%);
+    }
+  }
+
+  // Small Variant
+  &.button-small {
+    font-size: $font-sm;
+    padding: 0.5em 0.8em;
+  }
+  // Large Variant
+  &.button-large {
+    font-size: $font-lg;
+    padding: 0.7em 1.1em;
+  }
+  
+  // Outlined Button
+  // Default
+  &.button-outline {
+    background-color: transparent;
+    color: $color-text-muted;
+    border: 2px solid $color-text-muted;
+    box-shadow: none;
+
+    &:hover {
+      color: darken($color-text-muted, 50%);
+      border-color: darken($color-text-muted, 50%);
+      // background-color: transparentize($color-text-muted, 0.8);
+    }
+
+    // With Primary
+    &.primary {
+      color: $color-brand-primary;
+      
+      &:hover {
+        color: darken($color-brand-primary, 30%);
+        border-color: darken($color-brand-primary, 10%);
+        background-color: transparentize($color-brand-primary, 0.8);
+      }
+    }
+  }
+  .theme-icon {
+    font-size: 1.6em;
+
+    &.icon-before  {
+      margin-left: -0.2em;
+      margin-right: 0.3em;
+    }
+    &.icon-after {
+      margin-left: 0.3em;
+      margin-right: -0.2em;
+    }
+    &.icon-only {
+      margin-left: -0.35em;
+      margin-right: -0.35em;
+    }
+  }
+}
+.box-button {
+  display: block;
+  border: 2px solid $color-gray-40;
+  padding: 2rem;
+  border-radius: $default-radius;
+  @include input-transition();
+  
+  &:hover {
+    border-color: $color-gray-70;
+  }
+}
+
+//Dark Theme
+.text-dark {
+
+  .button,
+  button,
+  .menu li.has-button a,
+  .public-navbar-main li.current-menu-item.has-button > a, 
+  .public-navbar-main li.current-menu-ancestor.has-button > a,
+  html input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    background-color: transparentize($color-gray-20, 0.5);
+    color: $color-text-default;
+
+    &:hover {
+      // background-color: transparentize($color-gray-20, 0.4);
+      color: darken($color-text-default, 50%);
+    }
+    
+    &.primary {
+      background-color: $color-brand-primary-bright;
+      color: $color-brand-primary-dark;
+      
+      &:hover {
+        background-color: lighten($color-brand-primary-bright, 10%);
+      }
+    }
+    &.button-outline {
+      background-color: transparent;
+      color: $color-dark-text-muted;
+      border: 2px solid $color-dark-text-muted;
+  
+      &:hover {
+        color: lighten($color-dark-text-muted, 30%);
+        border-color: lighten($color-dark-text-muted, 10%);
+        // background-color: transparentize($color-dark-text-muted, 0.8);
+      }
+  
+      // With Primary
+      &.primary {
+        color: $color-brand-primary;
+        
+        &:hover {
+          color: darken($color-brand-primary-bright, 30%);
+          border-color: darken($color-brand-primary-bright, 10%);
+          background-color: transparentize($color-brand-primary-bright, 0.8);
+        }
+      }
+    }
+  }
+}

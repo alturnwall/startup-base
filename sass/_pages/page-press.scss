@@ -1,0 +1,31 @@
+.press-logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.press-logo img {
+    max-width: 90%;
+    max-height: 100px;
+    filter: grayscale(100%);
+    @media only screen and (max-width: $max-mobile-width) {
+        margin-top: 2rem;
+    }
+}
+
+.press-date {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #9F9F9F;
+}
+
+.press-link {
+    @media only screen and (max-width: $max-mobile-width) {
+        margin-bottom: 2rem;
+    }
+}
+
+.press_article .tag-label {
+    background: $color-brand-primary;
+    border-color: $color-brand-primary;
+}

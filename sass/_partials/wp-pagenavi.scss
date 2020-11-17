@@ -1,0 +1,40 @@
+// pagination, overriding plugin
+// see "wp_deregister_style( 'wp-pagenavi' );" in functions.php
+// which removes default styling from the plugin
+
+.wp-pagenavi {
+  margin: 0;
+  padding: 1rem 0 5rem;
+  width: 100%;
+  text-align: center;
+
+  a,
+  span,
+  span.current {
+    color: $color-gray-60;
+    font-style:normal;
+    margin:0;
+    padding:6px 8px;
+    text-decoration:none;
+    border-radius: 5px;
+  }
+  a:hover {
+    color: $color-white;
+    background-color:$color-gray-50;
+  }
+  span.pages {
+    color: $color-gray-60;
+    margin:0 20px 0 0;
+    padding:0 ;
+    font-size:12px;
+  }
+  span.current {
+    color: $color-white;
+    background-color: $color-brand-primary;
+  }
+  span.extend {
+    color:$color-gray-60;
+    margin:2px;
+    padding:2px 4px;
+  }
+}
