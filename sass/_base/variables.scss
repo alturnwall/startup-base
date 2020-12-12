@@ -81,23 +81,28 @@ $light-blue: lighten($blue, 15%);
 // Theme and Reserved Colors
 //
 
-$color-text-default: $color-gray-90;
-$color-text-muted: $color-gray-60;
-$color-text-light: $color-gray-50;
+// Text
+$color-text-default: $color-gray-90 !default;
+$color-text-muted: $color-gray-60 !default;
+$color-text-light: $color-gray-50 !default;
 
-$color-dark-text-default: $color-white;
-$color-dark-text-muted: $color-gray-30;
-$color-dark-text-light: $color-gray-50;
+// Surface
+$color-surface-default: $color-gray-20 !default;
+$color-surface-paper: $color-white !default;
 
-$color-brand-primary: #0FA041;
-$color-brand-primary-highlight: #00D179;
-$color-brand-primary-bright: #00D179;
-$color-brand-primary-dark: #09401C;
+$color-dark-text-default: $color-white !default;
+$color-dark-text-muted: $color-gray-30 !default;
+$color-dark-text-light: $color-gray-50 !default;
 
-$color-brand-secondary: #32D28F;
+$color-brand-primary: #0FA041 !default;
+$color-brand-primary-highlight: #00D179 !default;
+$color-brand-primary-bright: #00D179 !default;
+$color-brand-primary-dark: #09401C !default;
 
-$color-brand-dark: $color-gray-80;
-$color-brand-darker: $color-gray-90;
+$color-brand-secondary: #32D28F !default;
+
+$color-brand-dark: $color-gray-80 !default;
+$color-brand-darker: $color-gray-90 !default;
 
 $color-error: $red;
 
@@ -105,9 +110,9 @@ $color-error: $red;
 
 
 // Fonts
-$font-family-default: 'Libre Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-secondary: 'Source Serif Pro', 'Times New Roman', Times, serif;
-$font-family-tertiary: $font-family-default;
+$font-family-default: 'Libre Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-secondary: 'Source Serif Pro', 'Times New Roman', Times, serif !default;
+$font-family-tertiary: $font-family-default !default;
 
 
 // Utility Sizing

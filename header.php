@@ -11,14 +11,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLLBNQWRCG"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-SLLBNQWRCG');
-  </script> -->
+  <!-- Google Analytics Goes Here -->
   <!-- End gtag -->
 
   <meta charset="<?php bloginfo( 'charset' ); ?>" />

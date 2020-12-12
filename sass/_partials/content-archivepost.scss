@@ -22,12 +22,12 @@ article.hentry {
   p {
     font-size: $font-sm;
   }
-  .post-thumb {
-    background-color: $color-brand-primary-bright;
+  // .post-thumb {
+  //   background-color: $color-brand-primary-bright;
 
-    img {
-      filter: grayscale(100%);
-      opacity: 0.8;
-    }
-  }
+  //   img {
+  //     filter: grayscale(100%);
+  //     opacity: 0.8;
+  //   }
+  // }
 }

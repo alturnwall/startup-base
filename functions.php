@@ -18,18 +18,10 @@ function basetheme_setup() {
 
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'basetheme' ),
-		// 'blog' => __( 'Blog Section', 'basetheme' ),
-		// 'help' => __( 'Help Center', 'basetheme' ),
-		// 'resources' => __( 'Resources Section', 'basetheme' ),
-		// 'products' => __( 'Products Section', 'basetheme' ),
-		// 'partners' => __( 'Partners Menu', 'basetheme' ),
 		'footer-1' => __( 'Footer Menu 1', 'basetheme' ),
-		// 'footer-2' => __( 'Footer Menu 2', 'basetheme' )
 	) );
 
-	/*  Add media sizes  */
-	//add_image_size( 'thumb-no-crop', 400, 400, false );
-
+	// REMOVE WP EMOJI
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
 }
@@ -46,18 +38,18 @@ require get_template_directory() . '/inc/jetpack.php';
 // Additional settings for customizations for theme
 require get_template_directory() . '/functions/admin_editor.php';
 
-//  WP Advanced Search for Help Center
+// WP Advanced Search
 //require_once('wp-advanced-search/wpas.php');
 
 function basetheme_scripts() {
 
 	// Default Styles
-	wp_enqueue_style( 'basetheme-style', get_stylesheet_uri(), array(), '1.3', 'all' );
+	wp_enqueue_style( 'basetheme-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get('Version'));
 
 	// Default Scripts
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/jquery.waypoints.min.js', array('jquery'), '3.1.1');
-	wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/js.cookie.js', '2.2' );
+	// wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/js.cookie.js', '2.2' );
 	wp_enqueue_script( 'base', get_template_directory_uri() . '/js/base.js', array('jquery'), '3.5' );
 
 	// Single Posts with commenting turned on
@@ -80,287 +72,23 @@ function my_deregister_styles() {
 /*
 	Custom Post Types and Taxonomies
 */
-add_action( 'init', 'create_my_post_types' );
-function create_my_post_types() {
-
-	//Create Careers
-	// register_post_type( 'jobs',
-	// 	array(
-	// 			'labels' => array(
-	// 			'name' => __( 'Jobs' ),
-	// 			'singular_name' => __( 'Job' ),
-	// 		),
-	// 		'public' => true,
-	// 		'show_ui' => true,
-	// 		'menu_position' => 26,
-	// 		'hierarchical' => false,
-	// 		'has_archive' => false,
-	// 		'rewrite' => array('slug' => 'jobs', 'with_front' => 'false' ),
-	// 		'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
-	// 		'show_in_rest' => true,
-	// 	)
-	// );
-
-	//Create Careers "Teams"
-	// register_taxonomy('team',
-	//   array( 'jobs', 'people' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'has_archive' => true,
-	// 		'label' => __('Team'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'team' )
-	//   )
-	// );
-
-	//Create Resources
-	// register_post_type('resources',
-	// 	array(
-	// 			'labels' => array(
-	// 			'name' => __( 'Resources' ),
-	// 			'singular_name' => __( 'Resource' ),
-	// 		),
-	// 		'public' => true,
-	// 		'show_ui' => true,
-	// 		'menu_position' => 25,
-	// 		'hierarchical' => false,
-	// 		'has_archive' => 'resources/all',
-	// 		'rewrite' => array('slug' => 'resources', 'with_front' => false ),
-	// 		'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'excerpt' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create Resources "Resource Type"
-	// register_taxonomy('resource_type',
-	//   array( 'resources' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'label' => __('Type'),
-	// 		'has_archive' => true,
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'resources' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create Resources "Resource Series"
-	// register_taxonomy('resource_series',
-	//   array( 'resources' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'has_archive' => true,
-	// 		'label' => __('Series'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'resources' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create Resources "Resource Display"
-	// register_taxonomy('resource_display',
-	//   array( 'resources' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'has_archive' => false,
-	// 		'label' => __('Display'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'resource_display' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
+add_action( 'init', 'create_parent_post_types' );
+function create_parent_post_types() {
 
 
-
-	//Create "Case Study Type"
-	// register_taxonomy('case_study_type',
-	//   array( 'case_study' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'has_archive' => true,
-	// 		'label' => __('Case Study Type'),
-	// 		'show_ui' => true,
-	// 		'has_archive' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'case_study_type', 'with_front' => false),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-
-	//Create Customer Story post type
-	//NOTE: A Customer Story can be either a Success Snapshot or a Case Study,
-	// 		determined by its custom field. The 'case_study' slug reflects
-	//		the original naming of this post type before this was the case.
-	// register_post_type('case_study',
-	// 	array(
-	// 			'labels' => array(
-	// 			'name' => __( 'Customer Stories' ),
-	// 			'singular_name' => __( 'Customer Story' ),
-	// 		),
-	// 		'public' => true,
-	// 		'show_ui' => true,
-	// 		'menu_position' => 25,
-	// 		'hierarchical' => false,
-	// 		'has_archive' => true,
-	// 		'rewrite' => array('slug' => 'case_study', 'with_front' => false ),
-	// 		'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'excerpt' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create "Case Study Tag"
-	// register_taxonomy('case_study_tag',
-	//   array( 'case_study' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'has_archive' => false,
-	// 		'label' => __('Case Study Tag'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'case_study_tag' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create "Customer Type"
-	// register_taxonomy('customer_type',
-	// array( 'case_study' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'has_archive' => false,
-	// 		'label' => __('Customer Type'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'customer_type' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create "Segment"
-	// register_taxonomy('segment',
-	//   array( 'case_study' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'has_archive' => false,
-	// 		'label' => __('Segment'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'segment' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create "Use Case"
-	// register_taxonomy('use_case',
-	//   array( 'case_study' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'has_archive' => false,
-	// 		'label' => __('Use Case'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'use_case' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create "Post Display"
-	// register_taxonomy('post_display',
-	//   array( 'post' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'has_archive' => false,
-	// 		'label' => __('Display'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'post_display' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create "News Source"
-	// register_taxonomy('news_source',
-	//   array( 'post', 'press_article' ),
-	//   array(
-	// 		'hierarchical' => false,
-	// 		'has_archive' => true,
-	// 		'label' => __('News Source'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'news_source' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create "Article Category"
-	// register_taxonomy('article_category',
-	//   array( 'post', 'press_article' ),
-	//   array(
-	// 		'hierarchical' => false,
-	// 		'has_archive' => true,
-	// 		'label' => __('Article Category'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'article_category' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create "Post Series"
-	// register_taxonomy('post_series',
-	//   array( 'post' ),
-	//   array(
-	// 		'hierarchical' => true,
-	// 		'has_archive' => true,
-	// 		'label' => __('Series'),
-	// 		'show_ui' => true,
-	// 		'query_var' => true,
-	// 		'rewrite' => array( 'slug' => 'series' ),
-	// 		'show_in_rest' => true,
-	//   )
-	// );
-
-	//Create People
-	// register_post_type( 'people',
-	// 	array(
-	// 			'labels' => array(
-	// 			'name' => __( 'People' ),
-	// 			'singular_name' => __( 'Person' ),
-	// 		),
-	// 		'public' => true,
-	// 		'show_ui' => true,
-	// 		'menu_position' => 20,
-	// 		'hierarchical' => true,
-	// 		'has_archive' => false,
-	// 		'rewrite' => array('slug' => 'people', 'with_front' => false ),
-	// 		'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail' ),
-	// 		'show_in_rest' => true,
-	// 	)
-	// );
-
-	//Create Press
-	// register_post_type( 'press_article',
-	// 	array(
-	// 			'labels' => array(
-	// 			'name' => __( 'Press' ),
-	// 			'singular_name' => __( 'Press' ),
-	// 		),
-	// 		'public' => true,
-	// 		'show_ui' => true,
-	// 		'menu_position' => 26,
-	// 		'hierarchical' => false,
-	// 		'has_archive' => true,
-	// 		'rewrite' => array('slug' => 'press_articles', 'with_front' => false ),
-	// 		'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'excerpt' ),
-	// 		'show_in_rest' => true,
-	// 	)
-	// );
-
+	// Create "Post Display"
+	register_taxonomy('post_display',
+	  array( 'post' ),
+	  array(
+			'hierarchical' => true,
+			'has_archive' => false,
+			'label' => __('Display'),
+			'show_ui' => true,
+			'query_var' => true,
+			'rewrite' => array( 'slug' => 'post_display' ),
+			'show_in_rest' => true,
+	  )
+	);
 
 }
 /* End Custom post types and taxonomies */
@@ -508,28 +236,28 @@ function main_archive_loop($query) {
 	// 	$query->set( 'posts_per_page', -1 );
 	// }
 	
-	// Blog Category Pages
-	if( !is_admin() && is_category() && $query->is_main_query() ) {
-		$query->set( 'tax_query', array(
-		  array(
-				'taxonomy' => 'post_display',
-				'terms' => array('featured'),
-				'field' => 'slug',
-				'operator' => 'NOT IN',
-			  )
-  		));
-	}
-	// Blog Homepage Features
-	elseif( !is_admin() && $query->is_main_query() ) {
-		$query->set( 'tax_query', array(
-		  array(
-				'taxonomy' => 'post_display',
-				'terms' => array('main-feature'),
-				'field' => 'slug',
-				'operator' => 'NOT IN',
-			  )
-  		));
-	}
+	// // Blog Category Pages
+	// if( !is_admin() && is_category() && $query->is_main_query() ) {
+	// 	$query->set( 'tax_query', array(
+	// 	  array(
+	// 			'taxonomy' => 'post_display',
+	// 			'terms' => array('featured'),
+	// 			'field' => 'slug',
+	// 			'operator' => 'NOT IN',
+	// 		  )
+  // 		));
+	// }
+	// // Blog Homepage Features
+	// elseif( !is_admin() && $query->is_main_query() ) {
+	// 	$query->set( 'tax_query', array(
+	// 	  array(
+	// 			'taxonomy' => 'post_display',
+	// 			'terms' => array('main-feature'),
+	// 			'field' => 'slug',
+	// 			'operator' => 'NOT IN',
+	// 		  )
+  // 		));
+	// }
 }
 add_action( 'pre_get_posts', 'main_archive_loop' );
 

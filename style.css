@@ -5,15 +5,13 @@ Theme URI: https://github.com/alturnwall/startup-base
 Author: Alex Turnwall
 Author URI: https://www.turnwall.com
 Description: "Startup Base" is a base theme for creating new WordPress websites or themes.
-Version: 0.1.1
+Version: 0.2
 License: GNU General Public License
 License URI: license.txt
 Tags: Startups
 */
 /* =Reset
 -------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -3226,13 +3224,6 @@ article.hentry h4 a:hover {
 article.hentry p {
   font-size: 1.2rem;
 }
-article.hentry .post-thumb {
-  background-color: #00D179;
-}
-article.hentry .post-thumb img {
-  filter: grayscale(100%);
-  opacity: 0.8;
-}
 
 .bottom-cta {
   text-align: center;
@@ -3519,12 +3510,6 @@ article.hentry .post-thumb img {
   margin: 3rem auto;
 }
 
-body.blog_section {
-  background-color: #f0f2f3;
-}
-body.blog_section .public-navbar-main {
-  background-color: #f0f2f3;
-}
 body.blog_section .blog-header .container {
   padding: 2rem 0 0;
 }
