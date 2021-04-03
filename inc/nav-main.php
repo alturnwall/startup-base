@@ -2,7 +2,7 @@
   <div class="container">
     <div class="nav-wrapper">
       <div class="nav-brand">
-        <?php include "brand_logo_lockup.php" ?>
+        <?php get_template_part("inc/brand_logo_lockup");?>  
       </div>
       <div class="nav-menu">
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

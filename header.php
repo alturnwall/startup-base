@@ -35,12 +35,12 @@
     
     <header class="public-header transition header-top">
       <?php //include "inc/global-alert-banner.php";?>
-      <?php include "inc/nav-main.php";?>  
+      <?php get_template_part("inc/nav-main");?>  
     </header>
 
     <header class="mobile-header">
       <div class="mobile-header-inner">
-        <?php include "inc/brand_logo_lockup.php" ?>
+        <?php get_template_part("inc/brand_logo_lockup");?>
       </div>
     </header>
     
@@ -54,6 +54,6 @@
     
     <?php
       if ( is_home() || is_singular('post') || is_category() || is_tag() || is_tax() || is_page_template('page-blog-home.php') || is_page_template('page-flex-resource.php')  || is_404()  ) :
-        include "inc/nav-blog.php";
+        get_template_part("inc/nav-blog");
      endif; 
     ?>

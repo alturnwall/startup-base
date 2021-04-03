@@ -1754,7 +1754,6 @@ p.caption {
 }
 p.intro {
   font-size: 1.2rem;
-  font-family: "Source Serif Pro", "Times New Roman", Times, serif;
 }
 p.feature {
   font-size: 1.2rem;
@@ -2449,6 +2448,17 @@ input[type=submit] .theme-icon.icon-only {
   height: 100%;
 }
 
+.nav-menu.nav-vertical ul.menu {
+  flex-direction: column;
+  height: auto;
+}
+.nav-menu.nav-vertical li {
+  margin-left: 0;
+}
+.nav-menu.nav-vertical li > a {
+  padding: 0;
+  color: #8d8d8d;
+}
 .nav-menu ul.menu {
   list-style: none;
   margin: 0;
@@ -2550,6 +2560,10 @@ input[type=submit] .theme-icon.icon-only {
 .nav-menu > li > a:hover,
 .nav-menu > li > a:focus {
   background-color: transparent;
+}
+
+.nav-menu li > a.active {
+  color: #0FA041;
 }
 
 .mobile-header {
