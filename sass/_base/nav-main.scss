@@ -123,6 +123,7 @@
     &.has-button > a {
       height: auto;
     }
+    &.current_page_parent > a,
     &.current-menu-item > a,
     &.current-menu-ancestor > a {
       opacity: 1;
@@ -327,6 +328,7 @@
         position: relative;
         float: left;
       }
+      &.current_page_parent > a,
       &.current-menu-item > a,
       &.current-menu-ancestor > a {
         color: $color-text-muted;

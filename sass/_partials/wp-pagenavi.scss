@@ -2,11 +2,13 @@
 // see "wp_deregister_style( 'wp-pagenavi' );" in functions.php
 // which removes default styling from the plugin
 
+.pagination,
 .wp-pagenavi {
   margin: 0;
   padding: 1rem 0 5rem;
   width: 100%;
   text-align: center;
+  border-top: $border-light;
 
   a,
   span,

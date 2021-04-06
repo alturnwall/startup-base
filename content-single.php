@@ -71,9 +71,7 @@
             endif; ?>">
             <header class="entry-header">
               <p>
-                <a class="" href="<?php echo home_url(); ?>/blog/">
-                  <span class="">Blog</span>
-                </a>
+                <?php get_template_part('inc/blog-homelink'); ?>
                 &nbsp;/&nbsp;<?php echo get_the_category_list(' ', 'turnwall'); ?>
               </p>
               <h1 class="entry-title"><?php the_title(); ?></h1> 

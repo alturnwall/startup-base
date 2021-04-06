@@ -1753,10 +1753,10 @@ p.caption {
   color: #8d8d8d;
 }
 p.intro {
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 p.feature {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-family: "Source Serif Pro", "Times New Roman", Times, serif;
   font-weight: 400;
   margin-top: 20px;
@@ -1856,11 +1856,12 @@ blockquote cite:before {
   padding: 0px;
 }
 
-.rule {
+.rule,
+.rulethin {
   border: none;
   border-bottom: 1px solid #8d8d8d;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .rule-lg {
@@ -2495,7 +2496,7 @@ input[type=submit] .theme-icon.icon-only {
 .nav-menu li.has-button > a {
   height: auto;
 }
-.nav-menu li.current-menu-item > a, .nav-menu li.current-menu-ancestor > a {
+.nav-menu li.current_page_parent > a, .nav-menu li.current-menu-item > a, .nav-menu li.current-menu-ancestor > a {
   opacity: 1;
   color: #272727;
   border-color: #272727;
@@ -2665,7 +2666,8 @@ input[type=submit] .theme-icon.icon-only {
     position: relative;
     float: left;
   }
-  .nav-menu ul.menu li.current-menu-item > a, .nav-menu ul.menu li.current-menu-ancestor > a,
+  .nav-menu ul.menu li.current_page_parent > a, .nav-menu ul.menu li.current-menu-item > a, .nav-menu ul.menu li.current-menu-ancestor > a,
+.nav-menu ul.menu li.submenu_full.current_page_parent > a,
 .nav-menu ul.menu li.submenu_full.current-menu-item > a,
 .nav-menu ul.menu li.submenu_full.current-menu-ancestor > a {
     color: #5A5A5A;
@@ -3189,22 +3191,10 @@ a.brand-logo {
   line-height: 1;
   align-items: center;
   padding: 0;
-  letter-spacing: -0.02em;
-}
-a.brand-logo .cplogo {
-  width: 1.1em;
-  margin-top: 0.1em;
-  margin-right: 0.6em;
-}
-a.brand-logo .cplogo path {
-  fill: #272727;
 }
 
 .text-dark a.brand-logo {
   color: #ffffff;
-}
-.text-dark a.brand-logo .cplogo path {
-  fill: #ffffff;
 }
 
 .crop-bottom {
@@ -3219,7 +3209,7 @@ a.brand-logo .cplogo path {
 }
 
 article.hentry {
-  border-top: 1px solid #272727;
+  border-top: 1px solid #ccc;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
 }
@@ -3324,7 +3314,6 @@ article.hentry p {
 .social-share {
   margin: 3rem 0;
   padding: 1rem 0;
-  border-top: 1px solid #272727;
 }
 
 /* Start the Alert Banner */
@@ -3392,12 +3381,17 @@ article.hentry p {
   opacity: 0.7;
 }
 
+.pagination,
 .wp-pagenavi {
   margin: 0;
   padding: 1rem 0 5rem;
   width: 100%;
   text-align: center;
+  border-top: 1px solid #ccc;
 }
+.pagination a,
+.pagination span,
+.pagination span.current,
 .wp-pagenavi a,
 .wp-pagenavi span,
 .wp-pagenavi span.current {
@@ -3408,20 +3402,24 @@ article.hentry p {
   text-decoration: none;
   border-radius: 5px;
 }
+.pagination a:hover,
 .wp-pagenavi a:hover {
   color: #ffffff;
   background-color: #8d8d8d;
 }
+.pagination span.pages,
 .wp-pagenavi span.pages {
   color: #5A5A5A;
   margin: 0 20px 0 0;
   padding: 0;
   font-size: 12px;
 }
+.pagination span.current,
 .wp-pagenavi span.current {
   color: #ffffff;
   background-color: #0FA041;
 }
+.pagination span.extend,
 .wp-pagenavi span.extend {
   color: #5A5A5A;
   margin: 2px;
