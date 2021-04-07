@@ -22,7 +22,7 @@ $square: 60px;
 $global-header-height: 80px;
 
 // Grid Spacing
-$container-width: 90vw;
+$container-width: 90vw !default;
 $container-width-tablet: 85vw;
 $container-margin: 5vw;
 $container-max-width: 1300px;
