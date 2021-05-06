@@ -254,5 +254,15 @@ jQuery(document).ready(function($) {
     });
   }
 
+  // Sticky
+  //https://davidwalsh.name/detect-sticky
+  // const el = document.querySelector(".is-sticky")
+  // const observer = new IntersectionObserver( 
+  //   ([e]) => e.target.classList.toggle("is-stuck", e.intersectionRatio < 1),
+  //   { threshold: [1] }
+  // );
+  // observer.observe(el);
+
 
 });
+

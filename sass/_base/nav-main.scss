@@ -24,7 +24,7 @@
   position: fixed;
   z-index: $z-main-nav;
   width: 100%;
-  background: $color-white;
+  background: $color-surface-paper;
   font-size: $font-sm;
   box-shadow: 0 0 1.5rem #00000033;
 
@@ -150,7 +150,7 @@
       transition: all 0.5s ease;
       opacity: 0;
       pointer-events: none;
-      background-color: $color-white;
+      background-color: $color-surface-paper;
       position: absolute;
       top: 100%;
       max-width: 20rem;
@@ -221,7 +221,7 @@
   top: 0;
   z-index: $z-mobile-header;
   width: 100%;
-  background-color: $color-white;
+  background-color: $color-surface-paper;
   border-bottom: $border-light;
 
   @media only screen and (min-width: $min-desktop-width) {
@@ -401,7 +401,7 @@ a.navbar-toggle {
 	span {
 		display: block;
 		position: absolute;
-		background-color: $color-white;
+		background-color: $color-surface-paper;
 		width: 20px;
 		height: 2px;
 		border-radius: 2px;

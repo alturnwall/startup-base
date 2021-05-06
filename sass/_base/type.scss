@@ -127,39 +127,34 @@ p.feature-xl {
 }
 
 blockquote {
-    margin: 0;
-    padding: 0.5rem 0 3rem 1.5rem;
+    margin: 1rem 0 3rem 0;
+    padding: 0 0 0 3rem;
+    border-left: $border-light;
 
-    width: 80%;
-    margin: auto;
-    
+    // &:before {
+    //   content:'“';
+    //   font-family: $font-family-secondary;
+    //   font-size: 1.8em;
+    //   position: absolute;
+    //   margin-left: -0.8em;
+    //   margin-top: -0.2em;
+    // }
     p {
-        color: $color-brand-primary-highlight;
-        font-size: 1.4em;
-        line-height: 1.6;
-        margin-bottom: 0.5em
+      color: $color-brand-primary-highlight;
+      font-size: 1.4em;
+      line-height: 1.6;
+      margin-bottom: 0.5em
     }
-
-    p:before {
-        content:'“';
-        font-family: $font-family-secondary;
-        font-size: 1.8em;
-        position: absolute;
-        margin-left: -0.8em;
-        margin-top: -0.2em;
-    }
-
     cite {
-        font-family: $font-family-tertiary;
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        font-weight: 200;
-        margin-bottom: 0;
+      font-family: $font-family-tertiary;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: 200;
+      margin-bottom: 0;
     }
-
-    cite:before {
-        content:"— ";
-    }
+    // cite:before {
+    //   content:"— ";
+    // }
 }
 
 // Quotes
@@ -261,7 +256,7 @@ blockquote {
         position: absolute;
         top: -100%;
         right: -50%;
-        background-color: $color-white;
+        background-color: $color-surface-paper;
         box-shadow: $shadow-one;
         padding: 1rem;
         font-size: 1rem;

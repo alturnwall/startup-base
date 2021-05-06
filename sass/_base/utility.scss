@@ -162,6 +162,7 @@
   align-self: center;
 }
 
+
 // Font sizes
 
 .font-xs {
@@ -236,7 +237,7 @@
   background-color: $color-gray-10;
 }
 .paper {
-  background-color: $color-white;
+  background-color: $color-surface-paper;
 }
 
 .icon-illustration {
@@ -265,9 +266,11 @@
 }
 
 // Overflow:
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
+
 
 // Positioning
 
@@ -357,4 +360,16 @@
       }
     }
   }
+}
+
+// Sticky
+// https://davidwalsh.name/detect-sticky
+// ^^ not working
+.is-sticky {
+  position: sticky; 
+  top: 100px;
+
+  // &.is-stuck {
+  //   background-color: blueviolet;
+  // }
 }
