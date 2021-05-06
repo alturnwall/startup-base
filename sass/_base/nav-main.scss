@@ -111,7 +111,7 @@
       color: $color-text-muted;
       text-decoration: none;
       padding: 1.8rem 0.25rem 1.6rem;
-      border-bottom: 4px solid transparent;
+      border-bottom: 3px solid transparent;
       // This cancels out the default text effect / underline
       background-image: none;
       
@@ -217,6 +217,8 @@
 
 // Mobile Only Extra Header
 .mobile-header {
+  display: flex;
+  min-height: $square;
   position: absolute;
   top: 0;
   z-index: $z-mobile-header;

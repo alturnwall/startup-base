@@ -157,9 +157,11 @@
 .d-flex {
   display: flex;
 }
-
 .grid-center {
   align-self: center;
+}
+.hidden {
+  display: none;
 }
 
 
@@ -367,7 +369,7 @@
 // ^^ not working
 .is-sticky {
   position: sticky; 
-  top: 100px;
+  top: calc(#{$global-header-height} + #{$s-sm});
 
   // &.is-stuck {
   //   background-color: blueviolet;

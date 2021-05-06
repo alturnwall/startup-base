@@ -589,7 +589,7 @@ article:after {
   width: 90vw;
   margin: 0 auto;
   padding: 0;
-  max-width: 1300px;
+  max-width: 1400px;
 }
 @media (max-width: 992px) {
   .container {
@@ -1476,17 +1476,24 @@ blockquote cite {
   text-align: right;
 }
 
+.dark-theme,
 .text-dark {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #ccc;
+  color: #ccc !important;
 }
-.text-dark h1, .text-dark h2, .text-dark h3, .text-dark h4, .text-dark h5, .text-dark h6, .text-dark .header {
-  color: #ffffff;
+.dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme h5, .dark-theme h6, .dark-theme .header,
+.text-dark h1,
+.text-dark h2,
+.text-dark h3,
+.text-dark h4,
+.text-dark h5,
+.text-dark h6,
+.text-dark .header {
+  color: #ffffff !important;
   border-color: #ffffff;
 }
+.dark-theme p,
 .text-dark p {
-  color: #ccc;
+  color: #ccc !important;
   border-color: #ccc;
 }
 
@@ -2041,7 +2048,7 @@ input[type=submit] .theme-icon.icon-only {
   color: #5A5A5A;
   text-decoration: none;
   padding: 1.8rem 0.25rem 1.6rem;
-  border-bottom: 4px solid transparent;
+  border-bottom: 3px solid transparent;
   background-image: none;
 }
 .nav-menu li > a:hover {
@@ -2123,6 +2130,8 @@ input[type=submit] .theme-icon.icon-only {
 }
 
 .mobile-header {
+  display: flex;
+  min-height: 60px;
   position: absolute;
   top: 0;
   z-index: 99;
@@ -2547,6 +2556,10 @@ html.nav-open {
   align-self: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .font-xs {
   font-size: 1rem;
 }
@@ -2739,7 +2752,7 @@ html.nav-open {
 
 .is-sticky {
   position: sticky;
-  top: 100px;
+  top: calc(80px + 1rem);
 }
 
 a.brand-logo {
@@ -3155,7 +3168,7 @@ body.blog_section .post-header .entry-subtitle {
 .page-default .wp-block-columns {
   width: 90vw;
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 1400px;
 }
 .page-default .wp-block-media-text .wp-block-media-text__content {
   padding: 0 5vw;
@@ -3163,7 +3176,7 @@ body.blog_section .post-header .entry-subtitle {
 .page-default .wp-block-separator {
   width: 90vw;
   margin: 2rem auto;
-  max-width: 1300px;
+  max-width: 1400px;
 }
 
 .has-large-font-size {

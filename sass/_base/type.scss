@@ -277,17 +277,18 @@ blockquote {
 
 // Dark Theme
 
+.dark-theme, 
 .text-dark {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: $color-dark-text-muted;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  color: $color-dark-text-muted !important;
 
   h1, h2, h3, h4, h5, h6, .header {
-    color: $color-dark-text-default;
+    color: $color-dark-text-default !important;
     border-color: $color-dark-text-default;
   }
   p {
-    color: $color-dark-text-muted;
+    color: $color-dark-text-muted !important;
     border-color: $color-dark-text-muted;
   }
 }
