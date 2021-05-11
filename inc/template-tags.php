@@ -35,8 +35,8 @@ function theme_content_nav( $nav_id ) {
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( 'Previous Article', 'Previous post link', 'turnwall' ) . '</span><span class="meta-item">%title</span>' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '<span class="meta-nav">' . _x( 'Next Article', 'Next post link', 'turnwall' ) . '</span><span class="meta-item">%title</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( 'Previous', 'Previous post link', 'turnwall' ) . '</span><span class="meta-item">%title</span>' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '<span class="meta-nav">' . _x( 'Next', 'Next post link', 'turnwall' ) . '</span><span class="meta-item">%title</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 

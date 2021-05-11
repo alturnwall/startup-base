@@ -8,11 +8,8 @@
  */
 get_header(); ?>
 
-<div class="section index-header">
-    <div class="container pad-bt-sm">
-        <h1>All Articles</h1>
-    </div>
-</div>
+
+<?php get_template_part('inc/blog-indexheader'); ?>
 
 <?php 
 // get current page we are on. If not set we can assume we are on page 1.

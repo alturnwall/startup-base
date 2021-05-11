@@ -1,5 +1,6 @@
 // Variables
 
+
 // Z-index
 $z-main-nav: 10;
 $z-mobile-header: 99;
@@ -22,10 +23,10 @@ $square: 60px;
 $global-header-height: 80px;
 
 // Grid Spacing
-$container-width: 90vw;
+$container-width: 90vw !default;
 $container-width-tablet: 85vw;
 $container-margin: 5vw;
-$container-max-width: 1300px;
+$container-max-width: 1400px;
 
 // Colors
 
@@ -43,6 +44,7 @@ $color-gray-90: #272727;
 $black: #000000;
 
 $color-bluegray-10: #f0f2f3;
+$color-bluegray-90: #1c2022;
 
 
 // Red

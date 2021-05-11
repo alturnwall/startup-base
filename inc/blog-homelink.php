@@ -1,0 +1,1 @@
+<a class="blog-homelink" href="<?php echo home_url(); ?>/blog/">Blog</a>

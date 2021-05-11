@@ -28,9 +28,7 @@
         <span class="font-secondary">Blog.</span>
       </a> -->
       <p>
-        <a class="" href="<?php echo home_url(); ?>/blog/">
-          <span class="">Blog</span>
-        </a>
+        <?php get_template_part('inc/blog-homelink'); ?>
       </p>
 
     </div>

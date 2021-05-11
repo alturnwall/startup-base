@@ -443,7 +443,7 @@ function base_pagination() {
 
   // Display the pagination if more than one page is found
   if ( $paginate_links ) {
-      echo '<div class="pagination">';
+      echo '<div class="pagination col-xs-12">';
       echo $paginate_links;
       echo '</div><!--// end .pagination -->';
   }
