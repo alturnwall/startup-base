@@ -1,4 +1,4 @@
-<div class="col-xs-6 col-sm-3">  
+<div class="col-xs-12 col-sm-3 p-b-lg">  
   <a class="post-snippet" href="<?php the_permalink(); ?>" rel="bookmark">
     
     <?php the_post_thumbnail('thumbnail'); ?>

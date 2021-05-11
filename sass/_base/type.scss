@@ -220,6 +220,12 @@ blockquote {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
+.rule-md {
+  border: none;
+  border-bottom: 2px solid $color-text-default;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 .rule-lg {
   border: none;
   border-bottom: 4px solid $color-text-default;
