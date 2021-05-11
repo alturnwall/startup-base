@@ -30,7 +30,10 @@ if ( post_password_required() )
       <span class="bevicon bevico-arrow-forward transition"></span>
     </span>
   </a>
-  <div class="section comment-contain" <?php if ( get_comments_number() > 0 ) : ?>style="display: block;"<?php endif; ?>>
+  <div class="section comment-contain" 
+    <?php if ( get_comments_number() > 0 ){
+      echo `style="display: block;"`;
+    }; ?>>
     <div class="container">
       <div class="row">
         <div class="col-sm-2">

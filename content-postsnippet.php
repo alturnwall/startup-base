@@ -1,7 +1,7 @@
 <div class="col-xs-6 col-sm-3">  
   <a class="post-snippet" href="<?php the_permalink(); ?>" rel="bookmark">
     
-    <?php the_post_thumbnail('medium'); ?>
+    <?php the_post_thumbnail('thumbnail'); ?>
     
     <!-- <div class="post-categories">
       <?php //echo get_the_category_list(' ', 'turnwall'); ?>
