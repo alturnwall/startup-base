@@ -95,16 +95,16 @@ p {
     margin-bottom: 1.4em;
     color: $color-text-muted;
     
-    &.support {
-      font-size: 0.9rem;
+    &.small {
+      font-size: $font-sm;
+      line-height: inherit;
     }
     &.caption {
-      font-size: 0.8rem;
+      font-size: $font-sm;
       color: $color-gray-50;
     }
     &.intro {
-      font-size: 1.2em;
-      // font-family: $font-family-secondary;
+      font-size: $font-lg;
     }
     &.feature {
       font-size: 1.2em;

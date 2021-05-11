@@ -25,55 +25,12 @@
 
   </div><!-- end .public-body-container -->
 
-  <footer class="site-footer hidden-print text-dark">
-    <div class="container">
+  
+  <?php get_template_part("inc/site_footer");?>  
+  
+  <?php get_template_part("inc/subscribe_modal");?>  
 
-      <div class="footer-head">
-        <!-- <div class="row">
-          <div class="col-md-6 grid-center">
-            <?php //include "inc/brand_logo_lockup.php" ?>
-          </div>
-          <div class="col-md-6 grid-center text-right">
-
-          </div>
-        </div> -->
-      </div>
-      
-      <!-- <div class="row">
-        <div class="col-md-12 p-b-xl">
-          <p class="font-xl header">Text here.</p>
-        </div>
-      </div> -->
-
-      <div class="row">
-        <div class="col-md-6 p-r-xl">
-        <?php include "inc/brand_logo_lockup.php" ?>
-          <!-- <p><span class="header">Text here.</p> -->
-          <?php //include "inc/form_mailchimp_subscribe.php";?>
-        </div>
-        <div class="col-md-6 footer-menu">
-          <?php wp_nav_menu( 
-            array( 
-              'theme_location' => 'footer-1', 
-              'fallback_cb' => false,
-            ) 
-          ); ?>
-        </div>
-      </div>
-      
-      <?php //echo do_shortcode("[social-links]"); ?>
-
-      <div class="row">
-        <div class="col-md-12 footer-sub">
-          <p class="font-sm">&copy; <?php echo date("Y"); ?> 
-            <?php echo get_bloginfo( $show, 'display' ); ?>
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <?php include "inc/subscribe_modal.php" ?>
+  <?php //include "inc/subscribe_modal.php" ?>
 
 </div>
 <?php wp_footer(); ?>

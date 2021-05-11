@@ -1312,15 +1312,16 @@ p {
   margin-bottom: 1.4em;
   color: #5A5A5A;
 }
-p.support {
-  font-size: 0.9rem;
+p.small {
+  font-size: 1.2rem;
+  line-height: inherit;
 }
 p.caption {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: #8d8d8d;
 }
 p.intro {
-  font-size: 1.2em;
+  font-size: 1.8rem;
 }
 p.feature {
   font-size: 1.2em;
@@ -1995,18 +1996,18 @@ input[type=submit] .theme-icon.icon-only {
 .public-navbar-main .nav-wrapper {
   display: flex;
 }
-.public-navbar-main .nav-wrapper .nav-brand {
+.public-navbar-main .nav-brand {
   display: flex;
   align-items: center;
 }
-.public-navbar-main .nav-wrapper .nav-menu {
+.public-navbar-main .nav-menu {
   flex: 1;
   height: 80px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
-.public-navbar-main .nav-wrapper .nav-menu > div {
+.public-navbar-main .nav-menu > div {
   display: flex;
   height: 100%;
 }
@@ -2154,6 +2155,8 @@ input[type=submit] .theme-icon.icon-only {
   flex: 1;
   margin-right: 0;
   padding: 0.8rem 0;
+  display: flex;
+  height: 100%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -2759,6 +2762,7 @@ a.brand-logo {
   font-size: 1.5rem;
   text-decoration: none;
   display: inline-flex;
+  height: 100%;
   transition: all 0.2s ease;
   color: #272727;
   line-height: 1;

@@ -50,22 +50,21 @@
   }
   .nav-wrapper {
     display: flex;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+  }
+  .nav-menu {
+    flex: 1;
+    height: $global-header-height;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 
-    .nav-brand {
-      display: flex;
-      align-items: center;
-    }
-    .nav-menu {
-      flex: 1;
-      height: $global-header-height;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-
-      & > div {
-          display: flex;
-          height: 100%;
-      }
+    & > div {
+        display: flex;
+        height: 100%;
     }
   }
 }
@@ -239,6 +238,8 @@
       flex: 1;
       margin-right: 0;
       padding: 0.8rem 0;
+      display: flex;
+      height: 100%;
     }
   }
 }
