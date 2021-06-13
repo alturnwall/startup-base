@@ -1420,6 +1420,13 @@ blockquote cite {
   margin-bottom: 2rem;
 }
 
+.rule-md {
+  border: none;
+  border-bottom: 2px solid #272727;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 .rule-lg {
   border: none;
   border-bottom: 4px solid #272727;
@@ -2563,6 +2570,10 @@ html.nav-open {
   display: none;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .font-xs {
   font-size: 1rem;
 }
@@ -2756,6 +2767,10 @@ html.nav-open {
 .is-sticky {
   position: sticky;
   top: calc(80px + 1rem);
+}
+
+.expand-trigger {
+  cursor: pointer;
 }
 
 a.brand-logo {

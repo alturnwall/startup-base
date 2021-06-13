@@ -371,13 +371,12 @@
 }
 
 // Sticky
-// https://davidwalsh.name/detect-sticky
-// ^^ not working
 .is-sticky {
   position: sticky; 
   top: calc(#{$global-header-height} + #{$s-sm});
+}
 
-  // &.is-stuck {
-  //   background-color: blueviolet;
-  // }
+// For JS Expandable
+.expand-trigger {
+  cursor: pointer;
 }
