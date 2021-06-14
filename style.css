@@ -88,7 +88,7 @@ a img {
 .caption,
 .caption p {
   font-size: 0.8em;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1em;
 }
 
 p,
@@ -1504,6 +1504,14 @@ blockquote cite {
   color: #ccc !important;
   border-color: #ccc;
 }
+.dark-theme .muted,
+.text-dark .muted {
+  opacity: 0.75;
+}
+.dark-theme .light,
+.text-dark .light {
+  opacity: 0.5;
+}
 
 .text-not-dark h1,
 .text-not-dark h2,
@@ -1651,6 +1659,53 @@ button.button-outline.primary:hover,
 html input[type=button].button-outline.primary:hover,
 input[type=reset].button-outline.primary:hover,
 input[type=submit].button-outline.primary:hover {
+  color: #021408;
+  border-color: #0b712e;
+  background-color: rgba(15, 160, 65, 0.2);
+}
+.button.button-text,
+button.button-text,
+.menu li.has-button a.button-text,
+.public-navbar-main li.current-menu-item.has-button > a.button-text,
+.public-navbar-main li.current-menu-ancestor.has-button > a.button-text,
+html input[type=button].button-text,
+input[type=reset].button-text,
+input[type=submit].button-text {
+  background-color: transparent;
+  color: #5A5A5A;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+.button.button-text:hover,
+button.button-text:hover,
+.menu li.has-button a.button-text:hover,
+.public-navbar-main li.current-menu-item.has-button > a.button-text:hover,
+.public-navbar-main li.current-menu-ancestor.has-button > a.button-text:hover,
+html input[type=button].button-text:hover,
+input[type=reset].button-text:hover,
+input[type=submit].button-text:hover {
+  color: black;
+  border-color: black;
+}
+.button.button-text.primary,
+button.button-text.primary,
+.menu li.has-button a.button-text.primary,
+.public-navbar-main li.current-menu-item.has-button > a.button-text.primary,
+.public-navbar-main li.current-menu-ancestor.has-button > a.button-text.primary,
+html input[type=button].button-text.primary,
+input[type=reset].button-text.primary,
+input[type=submit].button-text.primary {
+  color: #0FA041;
+}
+.button.button-text.primary:hover,
+button.button-text.primary:hover,
+.menu li.has-button a.button-text.primary:hover,
+.public-navbar-main li.current-menu-item.has-button > a.button-text.primary:hover,
+.public-navbar-main li.current-menu-ancestor.has-button > a.button-text.primary:hover,
+html input[type=button].button-text.primary:hover,
+input[type=reset].button-text.primary:hover,
+input[type=submit].button-text.primary:hover {
   color: #021408;
   border-color: #0b712e;
   background-color: rgba(15, 160, 65, 0.2);
@@ -3148,8 +3203,10 @@ body.blog_section .post-content {
 body.blog_section .post-content p, body.blog_section .post-content li {
   font-family: "Source Serif Pro", "Times New Roman", Times, serif;
   color: #272727;
-  font-size: 1.55rem;
-  line-height: 1.75;
+  line-height: 1.6;
+}
+body.blog_section .post-content p {
+  padding-right: 1.5em;
 }
 body.blog_section .post-content figcaption {
   font-size: 1.2rem;

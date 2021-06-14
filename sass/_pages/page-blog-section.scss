@@ -43,11 +43,14 @@ body.blog_section {
 
   .post-content {
     margin-bottom: 3rem;
+
     p, li {
       font-family: $font-family-secondary;
       color: $color-text-default;
-      font-size: 1.55rem;
-      line-height: 1.75;
+      line-height: 1.6;
+    }
+    p {
+      padding-right: 1.5em;
     }
     figcaption {
       font-size: $font-sm;

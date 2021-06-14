@@ -297,6 +297,12 @@ blockquote {
     color: $color-dark-text-muted !important;
     border-color: $color-dark-text-muted;
   }
+  .muted {
+    opacity: 0.75;
+  }
+  .light {
+    opacity: 0.5;
+  }
 }
 .text-not-dark {
   h1,
