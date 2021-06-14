@@ -209,8 +209,13 @@ jQuery(document).ready(function($) {
 
 
   // Expandables
+  //
+  // Note the ">" direct child selector added to trigger function
+  // In order to accommodate expnadables within expandables, 
+  // we force use of expand-content being a direct child of .expandable
+  //
   $('.expand-trigger').click(function() {
-      $(this).closest('.expandable').find('.expand-content').slideToggle();
+      $(this).closest('.expandable').find('> .expand-content').slideToggle();
   });
   $('.collapse-trigger').click(function() {
       $(this).closest('.expand-content').slideUp();
