@@ -216,6 +216,7 @@ jQuery(document).ready(function($) {
   //
   $('.expand-trigger').click(function() {
       $(this).closest('.expandable').find('> .expand-content').slideToggle();
+      $(this).toggleClass('expanded');
   });
   $('.collapse-trigger').click(function() {
       $(this).closest('.expand-content').slideUp();

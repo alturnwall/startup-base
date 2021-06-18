@@ -303,6 +303,25 @@
 }
 
 
+// Alerts
+
+.alert {
+  padding: $s-md;
+  border-radius: $default-radius;
+  background-color: $blue-20;
+  margin-bottom: 1em;
+
+  p, h1, h2, h3, h4, h5, h6 {
+    color: $blue-70;
+    margin-bottom: 0 !important;
+  }
+  
+  // &.info {
+  //   background-color: $color-bl;
+
+  // }
+}
+
 
 // Expandable Sections 
 
