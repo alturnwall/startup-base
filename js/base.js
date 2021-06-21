@@ -150,6 +150,7 @@ jQuery(document).ready(function($) {
     };
     prevScrollTop = $window.scrollTop();
   });
+  
   //Show menu when footer is in view
   var bottomHit = $('.site-footer').waypoint({
     handler: function(direction){
