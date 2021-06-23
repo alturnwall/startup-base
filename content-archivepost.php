@@ -21,7 +21,7 @@
       <div class="col-md-4 col-sm-5 col-xs-12">
         <?php if (has_post_thumbnail()) : ?> 
           <a href="<?php the_permalink(); ?>" rel="bookmark" class="post-thumb">
-              <?php the_post_thumbnail('medium'); ?>
+              <?php the_post_thumbnail('thumbnail'); ?>
           </a> 
         <?php endif; ?> 
       </div>
