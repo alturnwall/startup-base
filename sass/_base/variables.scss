@@ -87,6 +87,7 @@ $light-blue: lighten($blue, 15%) !default;
 $color-text-default: $color-gray-90 !default;
 $color-text-muted: $color-gray-60 !default;
 $color-text-light: $color-gray-50 !default;
+$color-text-faded: $color-gray-30 !default;
 
 // Surface
 $color-surface-default: $color-gray-20 !default;
@@ -154,9 +155,9 @@ $default-radius: 4px !default;
 $form-radius: 4px !default;
 
 // Borders
-$border-light: 1px solid $color-gray-30 !default;
+$border-light: 1px solid $color-gray-50 !default;
 $border-default: 1px solid $color-text-default !default;
-$border-md: 1px solid $color-text-default !default;
+$border-md: 2px solid $color-text-default !default;
 $border-lg: 4px solid $color-text-default !default;
 
 // Buttons

@@ -104,7 +104,7 @@ p {
     }
     &.caption {
       font-size: $font-sm;
-      color: $color-gray-50;
+      color: $color-text-light;
     }
     &.intro {
       font-size: $font-lg;
@@ -227,19 +227,19 @@ blockquote {
 .rule,
 .rulethin {
   border: none;
-  border-bottom: 1px solid $color-gray-50;
+  border-bottom: $border-light;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 .rule-md {
   border: none;
-  border-bottom: 2px solid $color-text-default;
+  border-bottom: $border-md;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 .rule-lg {
   border: none;
-  border-bottom: 4px solid $color-text-default;
+  border-bottom: $border-lg;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -292,6 +292,31 @@ blockquote {
     text-align: right;
 }
 
+
+.text-default {
+  color: $color-text-default;
+  h1, h2, h3, h4, h5, h6, p, li {
+    color: $color-text-default;
+  }
+}
+.text-muted {
+  color: $color-text-muted;
+  h1, h2, h3, h4, h5, h6, p, li {
+    color: $color-text-muted;
+  }
+}
+.text-light {
+  color: $color-text-light;
+  h1, h2, h3, h4, h5, h6, p, li {
+    color: $color-text-light;
+  }
+}
+.text-faded {
+  color: $color-text-faded;
+  h1, h2, h3, h4, h5, h6, p, li {
+    color: $color-text-faded;
+  }
+}
 
 
 
