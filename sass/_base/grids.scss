@@ -104,24 +104,30 @@ article:after {
 
 /* MD only */
 @media (min-width: $min-desktop-width) and (max-width: $max-desktop-width) {
-    .clear-md {
-        clear: both;
-        display: table;
-    }
-    .clear-left-md {
-        clear: left;
-    }
+  .clear-md {
+    clear: both;
+    display: table;
+  }
+  .clear-left-md {
+    clear: left;
+  }
+  .hidden-md {
+    display: none !important;
+  }
 }
 
 /* LG only */
 @media (min-width: $min-large-desktop-width) {
-    .clear-lg {
-        clear: both;
-        display: table;
-    }
-    .clear-left-lg {
-        clear: left;
-    }
+  .clear-lg {
+    clear: both;
+    display: table;
+  }
+  .clear-left-lg {
+    clear: left;
+  }
+  .hidden-lg {
+    display: none !important;
+  }
 }
 
 .row {
