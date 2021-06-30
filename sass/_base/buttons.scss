@@ -82,6 +82,32 @@ input[type="submit"] {
       }
     }
   }
+  // Outlined Button
+  // Default
+  &.button-text {
+    background-color: transparent;
+    color: $color-text-muted;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+
+    &:hover {
+      color: darken($color-text-muted, 50%);
+      border-color: darken($color-text-muted, 50%);
+      // background-color: transparentize($color-text-muted, 0.8);
+    }
+
+    // With Primary
+    &.primary {
+      color: $color-brand-primary;
+      
+      &:hover {
+        color: darken($color-brand-primary, 30%);
+        border-color: darken($color-brand-primary, 10%);
+        background-color: transparentize($color-brand-primary, 0.8);
+      }
+    }
+  }
   .theme-icon {
     font-size: 1.6em;
 

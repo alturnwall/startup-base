@@ -5,7 +5,7 @@ Theme URI: https://github.com/alturnwall/startup-base
 Author: Alex Turnwall
 Author URI: https://www.turnwall.com
 Description: "Startup Base" is a base theme for creating new WordPress websites or themes.
-Version: 0.2
+Version: 0.3.4
 License: GNU General Public License
 License URI: license.txt
 Tags: Startups
@@ -88,7 +88,7 @@ a img {
 .caption,
 .caption p {
   font-size: 0.8em;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1em;
 }
 
 p,
@@ -660,6 +660,10 @@ article:after {
   .clear-left-md {
     clear: left;
   }
+
+  .hidden-md {
+    display: none !important;
+  }
 }
 /* LG only */
 @media (min-width: 1200px) {
@@ -670,6 +674,10 @@ article:after {
 
   .clear-left-lg {
     clear: left;
+  }
+
+  .hidden-lg {
+    display: none !important;
   }
 }
 .row {
@@ -686,6 +694,9 @@ article:after {
 }
 .row.row-small {
   grid-column-gap: 20px;
+}
+.row.row-10 {
+  grid-template-columns: repeat(10, 1fr);
 }
 
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
@@ -1309,7 +1320,7 @@ li {
 }
 
 p {
-  margin-bottom: 1.4em;
+  margin-bottom: 1.2em;
   color: #5A5A5A;
 }
 p.small {
@@ -1347,7 +1358,7 @@ p.feature-xl {
 blockquote {
   margin: 1rem 0 3rem 0;
   padding: 0 0 0 3rem;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #8d8d8d;
 }
 blockquote p {
   color: #00D179;
@@ -1412,10 +1423,27 @@ blockquote cite {
   padding: 0px;
 }
 
+.overline {
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  color: #8d8d8d;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.4em;
+}
+
 .rule,
 .rulethin {
   border: none;
   border-bottom: 1px solid #8d8d8d;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.rule-md {
+  border: none;
+  border-bottom: 2px solid #272727;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -1477,6 +1505,47 @@ blockquote cite {
   text-align: right;
 }
 
+.text-default {
+  color: #272727;
+}
+.text-default h1, .text-default h2, .text-default h3, .text-default h4, .text-default h5, .text-default h6, .text-default p, .text-default li {
+  color: #272727;
+}
+
+.text-muted {
+  color: #5A5A5A;
+}
+.text-muted h1, .text-muted h2, .text-muted h3, .text-muted h4, .text-muted h5, .text-muted h6, .text-muted p, .text-muted li {
+  color: #5A5A5A;
+}
+
+.text-light {
+  color: #8d8d8d;
+}
+.text-light h1, .text-light h2, .text-light h3, .text-light h4, .text-light h5, .text-light h6, .text-light p, .text-light li {
+  color: #8d8d8d;
+}
+
+.text-faded {
+  color: #ccc;
+}
+.text-faded h1, .text-faded h2, .text-faded h3, .text-faded h4, .text-faded h5, .text-faded h6, .text-faded p, .text-faded li {
+  color: #ccc;
+}
+
+.post-content h3 {
+  margin-bottom: 0.7em;
+}
+.post-content h4 {
+  margin-bottom: 0.8em;
+}
+.post-content p {
+  margin-bottom: 1.2em;
+}
+.post-content li {
+  margin-bottom: 0.5em;
+}
+
 .dark-theme,
 .text-dark {
   color: #ccc !important;
@@ -1496,6 +1565,14 @@ blockquote cite {
 .text-dark p {
   color: #ccc !important;
   border-color: #ccc;
+}
+.dark-theme .muted,
+.text-dark .muted {
+  opacity: 0.75;
+}
+.dark-theme .light,
+.text-dark .light {
+  opacity: 0.5;
 }
 
 .text-not-dark h1,
@@ -1644,6 +1721,53 @@ button.button-outline.primary:hover,
 html input[type=button].button-outline.primary:hover,
 input[type=reset].button-outline.primary:hover,
 input[type=submit].button-outline.primary:hover {
+  color: #021408;
+  border-color: #0b712e;
+  background-color: rgba(15, 160, 65, 0.2);
+}
+.button.button-text,
+button.button-text,
+.menu li.has-button a.button-text,
+.public-navbar-main li.current-menu-item.has-button > a.button-text,
+.public-navbar-main li.current-menu-ancestor.has-button > a.button-text,
+html input[type=button].button-text,
+input[type=reset].button-text,
+input[type=submit].button-text {
+  background-color: transparent;
+  color: #5A5A5A;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+.button.button-text:hover,
+button.button-text:hover,
+.menu li.has-button a.button-text:hover,
+.public-navbar-main li.current-menu-item.has-button > a.button-text:hover,
+.public-navbar-main li.current-menu-ancestor.has-button > a.button-text:hover,
+html input[type=button].button-text:hover,
+input[type=reset].button-text:hover,
+input[type=submit].button-text:hover {
+  color: black;
+  border-color: black;
+}
+.button.button-text.primary,
+button.button-text.primary,
+.menu li.has-button a.button-text.primary,
+.public-navbar-main li.current-menu-item.has-button > a.button-text.primary,
+.public-navbar-main li.current-menu-ancestor.has-button > a.button-text.primary,
+html input[type=button].button-text.primary,
+input[type=reset].button-text.primary,
+input[type=submit].button-text.primary {
+  color: #0FA041;
+}
+.button.button-text.primary:hover,
+button.button-text.primary:hover,
+.menu li.has-button a.button-text.primary:hover,
+.public-navbar-main li.current-menu-item.has-button > a.button-text.primary:hover,
+.public-navbar-main li.current-menu-ancestor.has-button > a.button-text.primary:hover,
+html input[type=button].button-text.primary:hover,
+input[type=reset].button-text.primary:hover,
+input[type=submit].button-text.primary:hover {
   color: #021408;
   border-color: #0b712e;
   background-color: rgba(15, 160, 65, 0.2);
@@ -1985,7 +2109,7 @@ input[type=submit] .theme-icon.icon-only {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 .public-navbar-main.nav-top .container {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #8d8d8d;
 }
 .public-navbar-main.hidenav {
   margin-top: -11rem;
@@ -2138,7 +2262,7 @@ input[type=submit] .theme-icon.icon-only {
   z-index: 99;
   width: 100%;
   background-color: #ffffff;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #8d8d8d;
 }
 @media only screen and (min-width: 993px) {
   .mobile-header {
@@ -2563,6 +2687,10 @@ html.nav-open {
   display: none;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .font-xs {
   font-size: 1rem;
 }
@@ -2690,6 +2818,24 @@ html.nav-open {
   margin-bottom: 0;
 }
 
+.alert {
+  display: flex;
+  padding: 2rem;
+  border-radius: 4px;
+  background-color: #cce1e7;
+  margin-bottom: 1em;
+}
+.alert p, .alert h1, .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
+  color: #002450;
+  margin-bottom: 0 !important;
+}
+.alert .leading-icon {
+  padding-right: 1.5rem;
+}
+.alert .leading-icon .material-icons-outlined {
+  font-size: 2.2rem;
+}
+
 .expandable .expand-content {
   display: none;
 }
@@ -2758,6 +2904,10 @@ html.nav-open {
   top: calc(80px + 1rem);
 }
 
+.expand-trigger {
+  cursor: pointer;
+}
+
 a.brand-logo {
   font-size: 1.5rem;
   text-decoration: none;
@@ -2786,7 +2936,7 @@ a.brand-logo {
 }
 
 article.hentry {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #8d8d8d;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
 }
@@ -2964,7 +3114,7 @@ article.hentry p {
   padding: 1rem 0 5rem;
   width: 100%;
   text-align: center;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #8d8d8d;
 }
 .pagination a,
 .pagination span,
@@ -3133,8 +3283,10 @@ body.blog_section .post-content {
 body.blog_section .post-content p, body.blog_section .post-content li {
   font-family: "Source Serif Pro", "Times New Roman", Times, serif;
   color: #272727;
-  font-size: 1.55rem;
-  line-height: 1.75;
+  line-height: 1.6;
+}
+body.blog_section .post-content p {
+  padding-right: 1.5em;
 }
 body.blog_section .post-content figcaption {
   font-size: 1.2rem;

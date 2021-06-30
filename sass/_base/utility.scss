@@ -303,6 +303,28 @@
 }
 
 
+// Alerts
+
+.alert {
+  display: flex;
+  padding: $s-md;
+  border-radius: $default-radius;
+  background-color: $blue-20;
+  margin-bottom: 1em;
+
+  p, h1, h2, h3, h4, h5, h6 {
+    color: $blue-70;
+    margin-bottom: 0 !important;
+  }
+  .leading-icon {
+    padding-right: 1.5rem;
+    
+    .material-icons-outlined {
+      font-size: 2.2rem;
+    }
+  }
+}
+
 
 // Expandable Sections 
 
@@ -371,13 +393,12 @@
 }
 
 // Sticky
-// https://davidwalsh.name/detect-sticky
-// ^^ not working
 .is-sticky {
   position: sticky; 
   top: calc(#{$global-header-height} + #{$s-sm});
+}
 
-  // &.is-stuck {
-  //   background-color: blueviolet;
-  // }
+// For JS Expandable
+.expand-trigger {
+  cursor: pointer;
 }

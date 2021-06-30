@@ -150,6 +150,7 @@ jQuery(document).ready(function($) {
     };
     prevScrollTop = $window.scrollTop();
   });
+  
   //Show menu when footer is in view
   var bottomHit = $('.site-footer').waypoint({
     handler: function(direction){
@@ -209,8 +210,14 @@ jQuery(document).ready(function($) {
 
 
   // Expandables
+  //
+  // Note the ">" direct child selector added to trigger function
+  // In order to accommodate expnadables within expandables, 
+  // we force use of expand-content being a direct child of .expandable
+  //
   $('.expand-trigger').click(function() {
-      $(this).closest('.expandable').find('.expand-content').slideToggle();
+      $(this).closest('.expandable').find('> .expand-content').slideToggle();
+      $(this).toggleClass('expanded');
   });
   $('.collapse-trigger').click(function() {
       $(this).closest('.expand-content').slideUp();
@@ -222,7 +229,7 @@ jQuery(document).ready(function($) {
   // Single page nav highlighting
   // https://codepen.io/dbilanoski/pen/LabpzG
 
-  // Get all sections that have an ID defined
+    // Get all sections that have an ID defined
   const sections = document.querySelectorAll("section[id]");
 
   // Add an event listener listening for scroll
@@ -236,7 +243,11 @@ jQuery(document).ready(function($) {
     // Now we loop through sections to get height, top and ID values for each
     sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 100;
+      // Updated to use getBoundingClientRect instead of offsetTop, based on:
+      // https://plainjs.com/javascript/styles/get-the-position-of-an-element-relative-to-the-document-24/
+      // https://newbedev.com/difference-between-getboundingclientrect-top-and-offsettop
+      // This allows the use of sections inside a relative parent
+      const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 100;
       sectionId = current.getAttribute("id");
       
       /*
@@ -247,21 +258,12 @@ jQuery(document).ready(function($) {
         scrollY > sectionTop &&
         scrollY <= sectionTop + sectionHeight
       ){
-        document.querySelector(".navigation a[href*=" + sectionId + "]").classList.add("active");
+        document.querySelector(".nav-in-page a[href*=" + sectionId + "]").classList.add("active");
       } else {
-        document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("active");
+        document.querySelector(".nav-in-page a[href*=" + sectionId + "]").classList.remove("active");
       }
     });
   }
-
-  // Sticky
-  //https://davidwalsh.name/detect-sticky
-  // const el = document.querySelector(".is-sticky")
-  // const observer = new IntersectionObserver( 
-  //   ([e]) => e.target.classList.toggle("is-stuck", e.intersectionRatio < 1),
-  //   { threshold: [1] }
-  // );
-  // observer.observe(el);
 
 
 });
