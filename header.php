@@ -11,8 +11,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-  <!-- Google Analytics Goes Here -->
-  <!-- End gtag -->
+  <?php get_template_part("inc/tracking-codes");?>  
 
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
