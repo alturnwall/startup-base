@@ -28,9 +28,7 @@
   
   <?php get_template_part("inc/site_footer");?>  
   
-  <?php get_template_part("inc/subscribe_modal");?>  
-
-  <?php //include "inc/subscribe_modal.php" ?>
+  <?php //get_template_part("inc/subscribe_modal");?>  
 
 </div>
 <?php wp_footer(); ?>
