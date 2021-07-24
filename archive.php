@@ -92,10 +92,10 @@ get_header(); ?>
 	</div>
 
 <?php 
-		if ( is_tag() || is_tax('related_establishment') || is_tax('related_personality') ) : 
+		if ( is_tag() ) : 
 			//Nothing
 		else :
-			get_template_part( 'content', 'featuredloop' );
+			//get_template_part( 'content', 'featuredloop' );
 		endif;
 	
 	get_template_part('content', 'archiveloop');

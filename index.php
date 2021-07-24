@@ -63,8 +63,7 @@ if(1 == $paged) :
         </div>
     </div>
 </div>
-<?php endif; wp_reset_postdata(); $postcounter == 0; endif; ?>
-
+<?php endif; wp_reset_postdata(); endif; ?>
 
 
 <?php if ( have_posts() ) : ?>

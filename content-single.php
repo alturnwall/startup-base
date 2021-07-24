@@ -4,7 +4,7 @@
 
 <!-- Start Top Header Layout -->
 <?php  
-// $layout = get_field("post_header_layout");
+ $layout = get_field("post_header_layout");
     
   if( $layout == 'full_width'): ?>
     <?php 
@@ -75,9 +75,9 @@
                 &nbsp;/&nbsp;<?php echo get_the_category_list(' ', 'turnwall'); ?>
               </p>
               <h1 class="entry-title"><?php the_title(); ?></h1> 
-              <!-- <?php //if (get_field('post_subtitle')) : ?>
-                <p class="entry-subtitle"><?php //echo get_field('post_subtitle'); ?></p>
-              <?php //endif; ?> -->
+              <?php if (get_field('post_subtitle')) : ?>
+                <p class="entry-subtitle"><?php echo get_field('post_subtitle'); ?></p>
+              <?php endif; ?>
             </header>
           </div>
           
@@ -102,7 +102,7 @@
       <div class="entry-meta">
         
         <?php 
-        // $authors = get_field('post_byline');
+        $authors = get_field('post_byline');
         if( $authors ): ?>
         <span class="meta-author">
           <?php foreach( $authors as $post ): // variable MUST be called $post (IMPORTANT) ?>
