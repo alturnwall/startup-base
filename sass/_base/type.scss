@@ -109,6 +109,9 @@ p {
     &.intro {
       font-size: $font-lg;
     }
+    &.subtitle {
+      font-size: $font-xl;
+    }
     &.feature {
       font-size: 1.2em;
       font-family: $font-family-secondary;
