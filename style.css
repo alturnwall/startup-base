@@ -5,7 +5,7 @@ Theme URI: https://github.com/alturnwall/startup-base
 Author: Alex Turnwall
 Author URI: https://www.turnwall.com
 Description: "Startup Base" is a base theme for creating new WordPress websites or themes.
-Version: 0.3.4
+Version: 0.3.5
 License: GNU General Public License
 License URI: license.txt
 Tags: Startups
@@ -2497,6 +2497,9 @@ html.nav-open {
   font-weight: 700;
 }
 
+/*
+  Padding  
+*/
 .p-sm {
   padding: 1rem !important;
 }
@@ -2677,8 +2680,225 @@ html.nav-open {
   padding-right: 6rem !important;
 }
 
+/* 
+  Margin 
+*/
+.m-0 {
+  margin: 0 !important;
+}
+
+.m-x-0 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.m-y-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.m-b-0 {
+  margin-bottom: 0 !important;
+}
+
+.m-t-0 {
+  margin-top: 0 !important;
+}
+
+.m-r-0 {
+  margin-right: 0 !important;
+}
+
+.m-l-0 {
+  margin-right: 0 !important;
+}
+
+.m-sm {
+  margin: 1rem !important;
+}
+
+.m-x-sm {
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+
+.m-y-sm {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.m-b-sm {
+  margin-bottom: 1rem !important;
+}
+
+.m-t-sm {
+  margin-top: 1rem !important;
+}
+
+.m-r-sm {
+  margin-right: 1rem !important;
+}
+
+.m-l-sm {
+  margin-right: 1rem !important;
+}
+
+.m-md {
+  margin: 2rem !important;
+}
+
+.m-x-md {
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
+}
+
+.m-y-md {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.m-b-md {
+  margin-bottom: 2rem !important;
+}
+
+.m-t-md {
+  margin-top: 2rem !important;
+}
+
+.m-r-md {
+  margin-right: 2rem !important;
+}
+
+.m-l-md {
+  margin-right: 2rem !important;
+}
+
+.m-lg {
+  margin: 3rem !important;
+}
+
+.m-x-lg {
+  margin-left: 3rem !important;
+  margin-right: 3rem !important;
+}
+
+.m-y-lg {
+  margin-top: 3rem;
+  margin-bottom: 3rem !important;
+}
+
+.m-b-lg {
+  margin-bottom: 3rem !important;
+}
+
+.m-t-lg {
+  margin-top: 3rem !important;
+}
+
+.m-r-lg {
+  margin-right: 3rem !important;
+}
+
+.m-l-lg {
+  margin-right: 3rem !important;
+}
+
+.m-xl {
+  margin: 4rem !important;
+}
+
+.m-x-xl {
+  margin-left: 4rem !important;
+  margin-right: 4rem !important;
+}
+
+.m-y-xl {
+  margin-top: 4rem;
+  margin-bottom: 4rem !important;
+}
+
+.m-b-xl {
+  margin-bottom: 4rem !important;
+}
+
+.m-t-xl {
+  margin-top: 4rem !important;
+}
+
+.m-r-xl {
+  margin-right: 4rem !important;
+}
+
+.m-l-xl {
+  margin-right: 4rem !important;
+}
+
+.m-2xl {
+  margin: 5rem !important;
+}
+
+.m-x-2xl {
+  margin-left: 5rem !important;
+  margin-right: 5rem !important;
+}
+
+.m-y-2xl {
+  margin-top: 5rem;
+  margin-bottom: 5rem !important;
+}
+
+.m-b-2xl {
+  margin-bottom: 5rem !important;
+}
+
+.m-t-2xl {
+  margin-top: 5rem !important;
+}
+
+.m-r-2xl {
+  margin-right: 5rem !important;
+}
+
+.m-l-2xl {
+  margin-right: 5rem !important;
+}
+
+.m-3xl {
+  margin: 6rem !important;
+}
+
+.m-x-3xl {
+  margin-left: 6rem !important;
+  margin-right: 6rem !important;
+}
+
+.m-y-3xl {
+  margin-top: 6rem;
+  margin-bottom: 6rem !important;
+}
+
+.m-b-3xl {
+  margin-bottom: 6rem !important;
+}
+
+.m-t-3xl {
+  margin-top: 6rem !important;
+}
+
+.m-r-3xl {
+  margin-right: 6rem !important;
+}
+
+.m-l-3xl {
+  margin-right: 6rem !important;
+}
+
 .d-flex {
   display: flex;
+}
+
+.align-items-flex-end {
+  align-items: flex-end;
 }
 
 .grid-center {
@@ -2694,35 +2914,35 @@ html.nav-open {
 }
 
 .font-xs {
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 .font-sm {
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
 }
 
 .font-md {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
 }
 
 .font-lg {
-  font-size: 1.8rem;
+  font-size: 1.8rem !important;
 }
 
 .font-xl {
-  font-size: 2.6rem;
+  font-size: 2.6rem !important;
 }
 
 .font-2xl {
-  font-size: 3.4rem;
+  font-size: 3.4rem !important;
 }
 
 .font-3xl {
-  font-size: 4.2rem;
+  font-size: 4.2rem !important;
 }
 
 .font-4xl {
-  font-size: 5.5rem;
+  font-size: 5.5rem !important;
 }
 
 .type-overline {
