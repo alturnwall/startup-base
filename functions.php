@@ -50,7 +50,7 @@ function basetheme_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/jquery.waypoints.min.js', array('jquery'), '3.1.1');
 	// wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/js.cookie.js', '2.2' );
-	wp_enqueue_script( 'base', get_template_directory_uri() . '/js/base.js', array('jquery'), '3.5' );
+	wp_enqueue_script( 'base', get_template_directory_uri() . '/js/base.js', array('jquery'), '3.6' );
 
 	// Single Posts with commenting turned on
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

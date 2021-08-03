@@ -53,6 +53,9 @@ article:after {
   @media (max-width: $max-tablet-width) {
       width: $container-width-tablet;
   }
+  @media (max-width: $max-mobile-width) {
+    width: $container-width-mobile;
+}
 }
 /* XS only */
 @media (max-width: $max-mobile-width) {

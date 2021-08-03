@@ -363,6 +363,9 @@ blockquote {
     color: $color-dark-text-muted !important;
     border-color: $color-dark-text-muted;
   }
+  .default {
+    color: $color-dark-text-default !important;
+  }
   .muted {
     opacity: 0.75;
   }

@@ -395,13 +395,13 @@
 }
 
 .color-text-default {
-  color: $color-text-default;
+  color: $color-text-default !important;
 }
 .color-text-muted {
-  color: $color-text-muted;
+  color: $color-text-muted !important;
 }
 .color-text-light {
-  color: $color-text-light;
+  color: $color-text-light !important;
 }
 
 .font-normal {
