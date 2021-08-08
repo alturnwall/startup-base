@@ -5,7 +5,7 @@ Theme URI: https://github.com/alturnwall/startup-base
 Author: Alex Turnwall
 Author URI: https://www.turnwall.com
 Description: "Startup Base" is a base theme for creating new WordPress websites or themes.
-Version: 0.3.5
+Version: 0.3.6
 License: GNU General Public License
 License URI: license.txt
 Tags: Startups
@@ -1259,6 +1259,7 @@ h4 {
 
 h5 {
   font-size: 1.5rem;
+  margin-bottom: 1.2em;
 }
 
 h6 {
@@ -1312,6 +1313,28 @@ p a:hover,
 li a:hover {
   color: #272727;
   background-size: 100% 88%;
+  background-image: linear-gradient(rgba(0, 209, 121, 0.7) 0%, rgba(0, 209, 121, 0.7) 100%);
+}
+
+.dark-theme h1 a,
+.dark-theme h2 a,
+.dark-theme h3 a,
+.dark-theme h4 a,
+.dark-theme h5 a,
+.dark-theme h6 a,
+.dark-theme p a,
+.dark-theme li a {
+  background-image: linear-gradient(#00D179 0%, #00D179 100%);
+}
+.dark-theme h1 a:hover,
+.dark-theme h2 a:hover,
+.dark-theme h3 a:hover,
+.dark-theme h4 a:hover,
+.dark-theme h5 a:hover,
+.dark-theme h6 a:hover,
+.dark-theme p a:hover,
+.dark-theme li a:hover {
+  color: #ffffff;
   background-image: linear-gradient(rgba(0, 209, 121, 0.7) 0%, rgba(0, 209, 121, 0.7) 100%);
 }
 
@@ -3056,8 +3079,9 @@ html.nav-open {
   background-color: #cce1e7;
   margin-bottom: 1em;
 }
-.alert p, .alert h1, .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
-  color: #002450;
+.alert p, .alert h1, .alert h2, .alert h3, .alert h4, .alert h5, .alert h6, .alert ul, .alert ol, .alert li,
+.alert .material-icons-outlined {
+  color: #002450 !important;
   margin-bottom: 0 !important;
 }
 .alert .leading-icon {
@@ -3065,6 +3089,13 @@ html.nav-open {
 }
 .alert .leading-icon .material-icons-outlined {
   font-size: 2.2rem;
+}
+.alert.gold {
+  background-color: #f3dea2;
+}
+.alert.gold p, .alert.gold h1, .alert.gold h2, .alert.gold h3, .alert.gold h4, .alert.gold h5, .alert.gold h6, .alert.gold ul, .alert.gold ol, .alert.gold li,
+.alert.gold .material-icons-outlined {
+  color: #5f3e01 !important;
 }
 
 .expandable .expand-content {
