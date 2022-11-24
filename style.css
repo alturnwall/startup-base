@@ -1563,6 +1563,18 @@ blockquote cite {
   color: #ccc;
 }
 
+.text-overflow-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text-overflow-clip {
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .post-content h3 {
   margin-bottom: 0.7em;
 }
