@@ -20,8 +20,8 @@
             &nbsp;/&nbsp;<?php echo get_the_category_list(' ', 'turnwall'); ?>
           </p>
           
-          
-          
+          <?php get_template_part( 'inc/post-series' ); ?> 
+
           <h1 class="entry-title"><?php the_title(); ?></h1> 
           
           <?php if (get_field('post_subtitle')) : ?>
@@ -104,7 +104,7 @@
       <article id="post-<?php the_ID(); ?>" class="post-content">
 
         <?php 
-        $terms = get_the_terms( $post->ID, 'post_series' );
+        $terms = get_the_terms( $post->ID, 'postseries' );
         if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
           foreach ( $terms as $term ) : ?>
             <div class="series-info">
@@ -115,25 +115,6 @@
 
         <?php the_content(); ?>
 
-        <?php if ( in_category( 'press' ) ) : ?>
-          <p class="press-source-text">An excerpt from 
-            <?php 
-            $terms = get_the_terms( $post->ID, 'news_source' );
-            if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
-              foreach ( $terms as $term ) : ?>
-                <span><?php echo $term->name; ?></span> 
-            <?php endforeach; endif; ?>
-          </p>
-          <a class="transition press-article-link brandon-bold" href="<?php //the_field('press_article_link'); ?>" target="_blank">
-              <div class="press-arrow-wrapper"><span class="bevicon bevico-arrow-forward arrow-rotate-diagonal"></span></div>Read the Full Article <br>on<?php 
-              $terms = get_the_terms( $post->ID, 'news_source' );
-              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
-                  foreach ( $terms as $term ) : ?>
-                  <?php echo $term->name; ?>
-              <?php endforeach; endif; ?>
-          </a>
-        <?php ;
-        endif; ?>
       </article>
     </div>
   </div>

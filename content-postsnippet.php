@@ -7,6 +7,8 @@
       <?php //echo get_the_category_list(' ', 'turnwall'); ?>
     </div> -->
     
+    <?php get_template_part( 'inc/post-series' ); ?> 
+    
     <h4 class="entry-title"><?php the_title(); ?></h4>
     
     <?php if (get_field('post_subtitle')) : ?>

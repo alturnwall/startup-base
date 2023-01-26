@@ -1588,11 +1588,24 @@ blockquote cite {
   margin-bottom: 0.5em;
 }
 
+.post-series-title {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: 1px solid #8d8d8d;
+  padding: 0.2em 0.5em;
+  border-radius: 0.5rem;
+}
+
 .span-reading-time {
-  display: block;
+  display: inline-block;
   font-size: 1.2rem;
   color: #8d8d8d;
   margin-bottom: 1em;
+}
+
+.blog-side-col .span-reading-time {
+  display: block;
 }
 
 .dark-theme,

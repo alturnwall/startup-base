@@ -379,14 +379,28 @@ blockquote {
 
 }
 
+.post-series-title {
+  display: inline-block;
+  font-size: $font-sm;
+  text-transform: uppercase;
+  border: $border-light;
+  padding: 0.2em 0.5em;
+  border-radius: 0.5rem;
+}
+
 // Plugins
 
 // Reading Time
 .span-reading-time {
-  display: block;
+  display: inline-block;
   font-size: $font-sm;
   color: $color-text-light;
   margin-bottom: 1em;
+}
+.blog-side-col {
+  .span-reading-time {
+    display: block;
+  }
 }
 
 
