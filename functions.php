@@ -75,8 +75,6 @@ function my_deregister_styles() {
 add_action( 'init', 'create_parent_post_types' );
 function create_parent_post_types() {
 
-
-	// Create "Post Display"
 	register_taxonomy('post_display',
 	  array( 'post' ),
 	  array(
@@ -89,6 +87,15 @@ function create_parent_post_types() {
 			'show_in_rest' => true,
 	  )
 	);
+  register_taxonomy( 'postseries', 'post', 
+    array(
+      'hierarchical' => true, 
+      'label' => __('Series'),
+      'query_var' => 'postseries',
+      'show_in_rest' => TRUE,
+      'rewrite' => array('slug' => 'series', 'with_front' => FALSE  ) 
+    ) 
+  );
 
 }
 /* End Custom post types and taxonomies */

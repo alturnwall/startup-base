@@ -379,7 +379,15 @@ blockquote {
 
 }
 
+// Plugins
 
+// Reading Time
+.span-reading-time {
+  display: block;
+  font-size: $font-sm;
+  color: $color-text-light;
+  margin-bottom: 1em;
+}
 
 
 

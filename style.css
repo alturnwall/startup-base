@@ -1588,6 +1588,13 @@ blockquote cite {
   margin-bottom: 0.5em;
 }
 
+.span-reading-time {
+  display: block;
+  font-size: 1.2rem;
+  color: #8d8d8d;
+  margin-bottom: 1em;
+}
+
 .dark-theme,
 .text-dark {
   color: #ccc !important;

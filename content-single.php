@@ -19,6 +19,9 @@
             <?php get_template_part('inc/blog-homelink'); ?>
             &nbsp;/&nbsp;<?php echo get_the_category_list(' ', 'turnwall'); ?>
           </p>
+          
+          
+          
           <h1 class="entry-title"><?php the_title(); ?></h1> 
           
           <?php if (get_field('post_subtitle')) : ?>
@@ -52,23 +55,6 @@
       <div class="entry-meta">
         
         <?php get_template_part( 'content', 'readingtime' ); ?> 
-
-        <?php 
-        $authors = get_field('post_byline');
-        if( $authors ): ?>
-        <span class="meta-author">
-          <?php foreach( $authors as $post ): // variable MUST be called $post (IMPORTANT) ?>
-            <?php setup_postdata($post); ?>
-            <a class="byline-photos" href="<?php echo get_permalink( $post->ID ); ?>">
-              <span class="byline-photo">
-                <?php the_post_thumbnail(); ?>
-              </span>
-              <span class="byline-photo-name"><?php echo get_the_title( $post->ID ); ?></span>
-            </a>
-            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-          <?php endforeach; ?>
-        </span>
-        <?php endif; ?><br/>
 
         <span class="meta-date"><?php echo get_the_date(); ?></span><br/>
         

@@ -3,6 +3,7 @@
     
     <div class="col-md-2 col-sm-5 col-xs-12">
       <?php include 'inc/post-cats.php'; ?>
+      <?php get_template_part( 'content', 'readingtime' ); ?>
     </div>
     
     <div class="col-sm-6 col-sm-7 col-xs-12">
