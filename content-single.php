@@ -3,95 +3,44 @@
 */ ?>
 
 <!-- Start Top Header Layout -->
-<?php  
- $layout = get_field("post_header_layout");
-    
-  if( $layout == 'full_width'): ?>
-    <?php 
-      if (has_post_thumbnail()) : 
-        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
-        $url = $thumb['0'];
-      endif;
-    ?>
-    <div class="section post-header post-header-full" style="background-image: url(<?php echo $url; ?>);">
-      <header class="entry-header dark">
-        <?php include 'inc/post-cats.php'; ?>
-        <h1 class="entry-title"><?php the_title(); ?></h1> 
-        <h4 class="entry-subtitle"><?php //echo get_field('post_subtitle'); ?></h4>
-      </header>
-    </div>
 
-
-  <?php elseif( $layout == 'no_image' ): ?>
-      <div class="section post-header post-header-noimage">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 p-b-md">
-              <header class="entry-header">
-                <?php include 'inc/post-cats.php'; ?>
-                <h1 class="entry-title"> <?php the_title(); ?> </h1> 
-                <h4 class="entry-subtitle"><?php //echo get_field('post_subtitle'); ?></h4>
-              </header>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-  <?php elseif( $layout == 'side_image' ): ?>
-        <?php 
-            if (has_post_thumbnail()) : 
-                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
-                $url = $thumb['0'];
-            endif;
-        ?>
-        <div class="section post-header post-header-side">
-            <div class="col-sm-6 featured-image" style="background-image: url(<?php echo $url; ?>);">
-            </div>
-            <div class="col-sm-6 dark-grey">
-                <header class="entry-header dark">
-                    <?php include 'inc/post-cats.php'; ?>
-                    <h1 class="entry-title"> <?php the_title(); ?> </h1> 
-                    <h2 class="entry-subtitle"><?php //echo get_field('post_subtitle'); ?></h2>
-                </header>
-            </div>
-        </div>
-
-
-  <?php else: ?>
-    <section class="post-header post-header-default">
-      <div class="container">
-        <div class="row">
+<section class="post-header post-header-default">
+  <div class="container">
+    <div class="row">
+      
+      <div class="<?php 
+        if ( has_post_thumbnail() ) : 
+          echo 'col-sm-5';
+        else : 
+          echo 'col-sm-8 p-b-md';
+        endif; ?>">
+        <header class="entry-header">
+          <p>
+            <?php get_template_part('inc/blog-homelink'); ?>
+            &nbsp;/&nbsp;<?php echo get_the_category_list(' ', 'turnwall'); ?>
+          </p>
+          <h1 class="entry-title"><?php the_title(); ?></h1> 
           
-          <div class="<?php 
-            if ( has_post_thumbnail() ) : 
-              echo 'col-sm-5';
-            else : 
-              echo 'col-sm-8 p-b-md';
-            endif; ?>">
-            <header class="entry-header">
-              <p>
-                <?php get_template_part('inc/blog-homelink'); ?>
-                &nbsp;/&nbsp;<?php echo get_the_category_list(' ', 'turnwall'); ?>
-              </p>
-              <h1 class="entry-title"><?php the_title(); ?></h1> 
-              <?php if (get_field('post_subtitle')) : ?>
-                <p class="entry-subtitle"><?php echo get_field('post_subtitle'); ?></p>
-              <?php endif; ?>
-            </header>
-          </div>
-          
-          <?php if (has_post_thumbnail()) : ?>
-            <div class="col-sm-7">
-              <?php the_post_thumbnail('large'); ?>
-            </div>
+          <?php if (get_field('post_subtitle')) : ?>
+            <p class="entry-subtitle"><?php echo get_field('post_subtitle'); ?></p>
           <?php endif; ?>
-          
-        </div>
-      </div>
-    </section>
 
-  <?php endif; ?>
+          <?php if ( has_excerpt() ) : // Only show custom excerpts not autoexcerpts ?>
+              <span class="entry-subtitle"><?php echo get_the_excerpt(); ?></span>
+          <?php endif; ?>
+
+        </header>
+      </div>
+      
+      <?php if (has_post_thumbnail()) : ?>
+        <div class="col-sm-7">
+          <?php the_post_thumbnail('large'); ?>
+        </div>
+      <?php endif; ?>
+      
+    </div>
+  </div>
+</section>
 
 <!-- End Top Header Layout -->
 
@@ -99,8 +48,11 @@
 <div class="container">
   <div class="row" style="position: relative !important;">
     <div class="col-sm-2 blog-side-col">
+      
       <div class="entry-meta">
         
+        <?php get_template_part( 'content', 'readingtime' ); ?> 
+
         <?php 
         $authors = get_field('post_byline');
         if( $authors ): ?>
