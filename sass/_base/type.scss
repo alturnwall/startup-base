@@ -379,14 +379,51 @@ blockquote {
 
 }
 
-.post-series-title {
-  display: inline-block;
-  font-size: $font-sm;
-  text-transform: uppercase;
-  border: $border-light;
-  padding: 0.2em 0.5em;
-  border-radius: 0.5rem;
+.post-categories a {
+	color: $color-text-light;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 0.07em;
 }
+.post-header {
+  .single-cats-breadcrumbs,
+  .post-series-list {
+    display: inline-block;
+    color: $color-text-light;
+    font-size: $font-sm;
+  }
+}
+
+
+// Series
+
+// .post-series-title {
+//   display: inline-block;
+//   font-size: $font-sm;
+//   text-transform: uppercase;
+//   border: $border-light;
+//   padding: 0.2em 0.5em;
+//   border-radius: 0.5rem;
+// }
+// .post-series-title {
+//   display: inline-block;
+//   font-size: $font-sm;
+// }
+.series-info {
+  border-bottom: $border-light;
+  margin-bottom: $s-md;
+  
+  p {
+    color: $color-text-light !important;
+    font-style: italic;
+  }
+}
+body.tax-postseries {
+  .post-series-list {
+    display: none !important;
+  }
+}
+
 
 // Plugins
 

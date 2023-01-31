@@ -1588,13 +1588,31 @@ blockquote cite {
   margin-bottom: 0.5em;
 }
 
-.post-series-title {
-  display: inline-block;
-  font-size: 1.2rem;
+.post-categories a {
+  color: #8d8d8d;
+  font-size: 1em;
   text-transform: uppercase;
-  border: 1px solid #8d8d8d;
-  padding: 0.2em 0.5em;
-  border-radius: 0.5rem;
+  letter-spacing: 0.07em;
+}
+
+.post-header .single-cats-breadcrumbs,
+.post-header .post-series-list {
+  display: inline-block;
+  color: #8d8d8d;
+  font-size: 1.2rem;
+}
+
+.series-info {
+  border-bottom: 1px solid #8d8d8d;
+  margin-bottom: 2rem;
+}
+.series-info p {
+  color: #8d8d8d !important;
+  font-style: italic;
+}
+
+body.tax-postseries .post-series-list {
+  display: none !important;
 }
 
 .span-reading-time {
@@ -3251,8 +3269,20 @@ article.hentry {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
 }
-article.hentry .post-categories p {
-  margin-bottom: 0;
+article.hentry .post-categories,
+article.hentry .post-series-list {
+  display: inline;
+  font-size: 0.85em;
+  color: #ccc;
+}
+article.hentry .post-categories a,
+article.hentry .post-series-list a {
+  display: inline-block;
+  background-size: 100% 0em;
+  margin-bottom: 0.6em;
+}
+article.hentry .post-categories a {
+  font-size: 0.85em;
 }
 article.hentry h4 {
   font-size: 2.6rem;
@@ -3262,9 +3292,6 @@ article.hentry h4 a {
 }
 article.hentry h4 a:hover {
   background-size: 100% 88%;
-}
-article.hentry p {
-  font-size: 1.2rem;
 }
 
 .bottom-cta {
@@ -3596,7 +3623,7 @@ body.blog_section .post-content p, body.blog_section .post-content li {
   color: #272727;
   line-height: 1.6;
 }
-body.blog_section .post-content p {
+body.blog_section .post-content p, body.blog_section .post-content ul, body.blog_section .post-content ol {
   padding-right: 1.5em;
 }
 body.blog_section .post-content figcaption {

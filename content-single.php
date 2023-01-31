@@ -14,10 +14,9 @@
         else : 
           echo 'col-sm-8 p-b-md';
         endif; ?>">
-        <header class="entry-header">
-          <p>
-            <?php get_template_part('inc/blog-homelink'); ?>
-            &nbsp;/&nbsp;<?php echo get_the_category_list(' ', 'turnwall'); ?>
+        <header class="post-header">
+          <p class="single-cats-breadcrumbs">
+            <?php get_template_part('inc/blog-homelink'); ?> &nbsp;/&nbsp; <?php echo get_the_category_list(' ', 'turnwall'); ?>
           </p>
           
           <?php get_template_part( 'inc/post-series' ); ?> 
@@ -69,17 +68,17 @@
           if ( ! turnwall_categorized_blog() ) {
               // This blog only has 1 category so we just need to worry about tags in the meta text
               if ( '' != $tag_list ) {
-                  $meta_text = __( 'Tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'turnwall' );
+                  $meta_text = __( '<p>Tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.</p>', 'turnwall' );
               } else {
-                  $meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'turnwall' );
+                  $meta_text = __( '<p>Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.</p>', 'turnwall' );
               }
 
           } else {
               // But this blog has loads of categories so we should probably display them here
               if ( '' != $tag_list ) {
-                  $meta_text = __( 'Posted in %1$s and tagged %2$s.', 'turnwall' );
+                  $meta_text = __( '<p>Posted in %1$s and tagged %2$s.</p>', 'turnwall' );
               } else {
-                  $meta_text = __( 'Posted in %1$s.', 'turnwall' );
+                  $meta_text = __( '<p>Posted in %1$s.</p>', 'turnwall' );
               }
 
           } // end check for categories on this blog
@@ -95,10 +94,12 @@
         </div>
       </div>
       
-      <div class="social-share">
-        <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
-      </div>
-
+      <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) :?> 
+        <div class="social-share">
+          <?php ADDTOANY_SHARE_SAVE_KIT();?>
+        </div>
+      <?php endif; ?>
+      
     </div>
     <div class="col-sm-7">
       <article id="post-<?php the_ID(); ?>" class="post-content">
@@ -108,8 +109,11 @@
         if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
           foreach ( $terms as $term ) : ?>
             <div class="series-info">
-              <?php echo $term->description; ?><br/>
-              <a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?> &rarr;</a> 
+              <p>
+                <?php echo $term->description; ?>
+                <br/>
+                <a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?> Series &rarr;</a> 
+              </p>
             </div>
         <?php endforeach; endif; ?>
 
