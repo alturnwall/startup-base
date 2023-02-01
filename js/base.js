@@ -1,4 +1,4 @@
-//Version 3.5
+//Version 3.6
 jQuery(document).ready(function($) {
 
   //Specifically for the Global Alert Banner
@@ -161,8 +161,9 @@ jQuery(document).ready(function($) {
         navbar.removeClass('supernav');
       }
     },
-    offset: '100%',
-  });
+    offset: '80%',
+  }
+  );
 
 
   //Blog search show/hide

@@ -50,7 +50,7 @@ function basetheme_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/jquery.waypoints.min.js', array('jquery'), '3.1.1');
 	// wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/js.cookie.js', '2.2' );
-	wp_enqueue_script( 'base', get_template_directory_uri() . '/js/base.js', array('jquery'), '3.5' );
+	wp_enqueue_script( 'base', get_template_directory_uri() . '/js/base.js', array('jquery'), '3.6' );
 
 	// Single Posts with commenting turned on
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -75,8 +75,6 @@ function my_deregister_styles() {
 add_action( 'init', 'create_parent_post_types' );
 function create_parent_post_types() {
 
-
-	// Create "Post Display"
 	register_taxonomy('post_display',
 	  array( 'post' ),
 	  array(
@@ -89,6 +87,15 @@ function create_parent_post_types() {
 			'show_in_rest' => true,
 	  )
 	);
+  register_taxonomy( 'postseries', 'post', 
+    array(
+      'hierarchical' => true, 
+      'label' => __('Series'),
+      'query_var' => 'postseries',
+      'show_in_rest' => TRUE,
+      'rewrite' => array('slug' => 'series', 'with_front' => FALSE  ) 
+    ) 
+  );
 
 }
 /* End Custom post types and taxonomies */

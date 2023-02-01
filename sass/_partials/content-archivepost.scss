@@ -3,10 +3,22 @@ article.hentry {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
 
-  .post-categories {
-    p {
-      margin-bottom: 0;
-    }
+  .post-categories, 
+  .post-series-list {
+      display: inline;
+      font-size: 0.85em;
+      color: $color-text-faded;
+      
+      a {
+        display: inline-block;
+        background-size: 100% 0em;
+        margin-bottom: 0.6em;
+      }
+  }
+  .post-categories {      
+      a {
+        font-size: 0.85em;
+      }
   }
   h4 {
     font-size: $font-xl;
@@ -18,8 +30,5 @@ article.hentry {
         background-size: 100% 88%;
       }
     }
-  }
-  p {
-    font-size: $font-sm;
   }
 }

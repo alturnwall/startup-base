@@ -69,7 +69,7 @@ get_header(); ?>
 						?></h1>
 
 					<?php
-					if ( is_category() ) :
+					if ( is_category() || is_tax() ) :
 						// show an optional category description
 						$category_description = category_description();
 						if ( ! empty( $category_description ) ) :
