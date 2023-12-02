@@ -1,7 +1,7 @@
 # Startup-Base: a standalone or parent theme
 My simple WordPress Starter theme for websites, good for a startup CMS or personal website.
 
-Freely re-usable, at your own risk :)
+Do you want to use WordPress as a CMS, but code your own theme? This might be for you. Freely re-usable, at your own risk :)
 
 This is my personal mess of code that has been hacked, copy/pasted and re-written for dozens of projects over the years. It's largely based on the [Underscores Starter Theme](https://underscores.me/), which I forked many moons ago to arrive at this. I'm not sure anyone should really use this except for me, but it might give you some interesting ideas for your own theming. 
 
