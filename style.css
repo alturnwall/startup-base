@@ -248,7 +248,7 @@ textarea {
   /* Improves appearance and consistency in all browsers */
   *vertical-align: middle;
   /* Improves appearance and consistency in all browsers */
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 button,
@@ -431,7 +431,7 @@ footer ul.menu li {
   margin: 0;
 }
 footer ul.menu li a {
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   color: #ffffff;
   text-decoration: none;
@@ -1226,18 +1226,19 @@ article:after {
   }
 }
 body {
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #272727;
   font-size: 1.5rem;
   line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6, .header {
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #272727;
   margin-bottom: 0.6em;
   line-height: 1.3;
+  letter-spacing: -0.05rem;
 }
 
 h1 {
@@ -1297,7 +1298,7 @@ p a,
 li a {
   color: inherit;
   text-decoration: none;
-  background-image: linear-gradient(#00D179 0%, #00D179 100%);
+  background-image: linear-gradient(#0038d1 0%, #0038d1 100%);
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 0.1em;
@@ -1313,7 +1314,7 @@ p a:hover,
 li a:hover {
   color: #272727;
   background-size: 100% 88%;
-  background-image: linear-gradient(rgba(0, 209, 121, 0.7) 0%, rgba(0, 209, 121, 0.7) 100%);
+  background-image: linear-gradient(rgba(0, 56, 209, 0.7) 0%, rgba(0, 56, 209, 0.7) 100%);
 }
 
 .dark-theme h1 a,
@@ -1340,11 +1341,12 @@ li a:hover {
 
 p,
 li {
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.45;
   color: #5A5A5A;
+  letter-spacing: -0.03rem;
 }
 
 p {
@@ -1370,7 +1372,7 @@ p.feature {
   font-family: "Source Serif Pro", "Times New Roman", Times, serif;
   font-weight: 400;
   margin-top: 20px;
-  color: #0FA041;
+  color: #113fd7;
 }
 @media only screen and (max-width: 992px) {
   p.feature {
@@ -1392,13 +1394,13 @@ blockquote {
   border-left: 1px solid #8d8d8d;
 }
 blockquote p {
-  color: #00D179;
+  color: #0038d1;
   font-size: 1.4em;
   line-height: 1.6;
   margin-bottom: 0.5em;
 }
 blockquote cite {
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 200;
@@ -1412,14 +1414,14 @@ blockquote cite {
 }
 
 .quote-container p {
-  color: #0FA041;
+  color: #113fd7;
 }
 
 .quotation-mark {
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 63px;
-  color: #0FA041;
+  color: #113fd7;
 }
 
 .stat-number {
@@ -1428,7 +1430,7 @@ blockquote cite {
 }
 
 .stat-caption {
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   margin: 0;
@@ -1500,7 +1502,7 @@ blockquote cite {
 .footnote {
   display: inline-block;
   position: relative;
-  border-bottom: 2px dashed #0FA041;
+  border-bottom: 2px dashed #113fd7;
   cursor: pointer;
 }
 .footnote:hover .footnote-caption {
@@ -1511,7 +1513,7 @@ blockquote cite {
 .footnote .footnote-caption {
   opacity: 0;
   pointer-events: none;
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: absolute;
   top: -100%;
   right: -50%;
@@ -1728,7 +1730,7 @@ button.primary,
 html input[type=button].primary,
 input[type=reset].primary,
 input[type=submit].primary {
-  background-color: #0FA041;
+  background-color: #113fd7;
   color: #ffffff;
 }
 .button.primary:hover,
@@ -1739,7 +1741,7 @@ button.primary:hover,
 html input[type=button].primary:hover,
 input[type=reset].primary:hover,
 input[type=submit].primary:hover {
-  background-color: #0b712e;
+  background-color: #0d31a8;
 }
 .button.button-small,
 button.button-small,
@@ -1795,7 +1797,7 @@ button.button-outline.primary,
 html input[type=button].button-outline.primary,
 input[type=reset].button-outline.primary,
 input[type=submit].button-outline.primary {
-  color: #0FA041;
+  color: #113fd7;
 }
 .button.button-outline.primary:hover,
 button.button-outline.primary:hover,
@@ -1805,9 +1807,9 @@ button.button-outline.primary:hover,
 html input[type=button].button-outline.primary:hover,
 input[type=reset].button-outline.primary:hover,
 input[type=submit].button-outline.primary:hover {
-  color: #021408;
-  border-color: #0b712e;
-  background-color: rgba(15, 160, 65, 0.2);
+  color: #061549;
+  border-color: #0d31a8;
+  background-color: rgba(17, 63, 215, 0.2);
 }
 .button.button-text,
 button.button-text,
@@ -1842,7 +1844,7 @@ button.button-text.primary,
 html input[type=button].button-text.primary,
 input[type=reset].button-text.primary,
 input[type=submit].button-text.primary {
-  color: #0FA041;
+  color: #113fd7;
 }
 .button.button-text.primary:hover,
 button.button-text.primary:hover,
@@ -1852,9 +1854,9 @@ button.button-text.primary:hover,
 html input[type=button].button-text.primary:hover,
 input[type=reset].button-text.primary:hover,
 input[type=submit].button-text.primary:hover {
-  color: #021408;
-  border-color: #0b712e;
-  background-color: rgba(15, 160, 65, 0.2);
+  color: #061549;
+  border-color: #0d31a8;
+  background-color: rgba(17, 63, 215, 0.2);
 }
 .button .theme-icon,
 button .theme-icon,
@@ -1943,8 +1945,8 @@ input[type=submit] .theme-icon.icon-only {
 .text-dark html input[type=button].primary,
 .text-dark input[type=reset].primary,
 .text-dark input[type=submit].primary {
-  background-color: #00D179;
-  color: #09401C;
+  background-color: #0038d1;
+  color: #002078;
 }
 .text-dark .button.primary:hover,
 .text-dark button.primary:hover,
@@ -1954,7 +1956,7 @@ input[type=submit] .theme-icon.icon-only {
 .text-dark html input[type=button].primary:hover,
 .text-dark input[type=reset].primary:hover,
 .text-dark input[type=submit].primary:hover {
-  background-color: #05ff96;
+  background-color: #0548ff;
 }
 .text-dark .button.button-outline,
 .text-dark button.button-outline,
@@ -1987,7 +1989,7 @@ input[type=submit] .theme-icon.icon-only {
 .text-dark html input[type=button].button-outline.primary,
 .text-dark input[type=reset].button-outline.primary,
 .text-dark input[type=submit].button-outline.primary {
-  color: #0FA041;
+  color: #113fd7;
 }
 .text-dark .button.button-outline.primary:hover,
 .text-dark button.button-outline.primary:hover,
@@ -1997,9 +1999,9 @@ input[type=submit] .theme-icon.icon-only {
 .text-dark html input[type=button].button-outline.primary:hover,
 .text-dark input[type=reset].button-outline.primary:hover,
 .text-dark input[type=submit].button-outline.primary:hover {
-  color: #003820;
-  border-color: #009e5b;
-  background-color: rgba(0, 209, 121, 0.2);
+  color: #000f38;
+  border-color: #002a9e;
+  background-color: rgba(0, 56, 209, 0.2);
 }
 
 .close {
@@ -2157,7 +2159,7 @@ input[type=submit] .theme-icon.icon-only {
   padding: 0.3rem 0;
 }
 .footer-menu a[href]:hover {
-  color: #00D179;
+  color: #0038d1;
 }
 
 .public-header {
@@ -2335,7 +2337,7 @@ input[type=submit] .theme-icon.icon-only {
 }
 
 .nav-menu li > a.active {
-  color: #0FA041;
+  color: #113fd7;
 }
 
 .mobile-header {
@@ -2495,7 +2497,7 @@ a.navbar-toggle {
   height: 60px;
   width: 60px;
   color: #000000;
-  background-color: #0FA041;
+  background-color: #113fd7;
   transition: all 0.2s ease;
   overflow: hidden;
   cursor: pointer;
@@ -3029,7 +3031,7 @@ html.nav-open {
 
 .type-overline {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: #8d8d8d;
@@ -3048,7 +3050,7 @@ html.nav-open {
 }
 
 .font-normal {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .font-bold {
@@ -3081,7 +3083,7 @@ html.nav-open {
 }
 
 .icon-illustration {
-  color: #00D179;
+  color: #0038d1;
   font-size: 1.3em;
   margin-right: 0.3em;
 }
@@ -3317,7 +3319,7 @@ article.hentry h4 a:hover {
 }
 #mc_embed_signup div.mce_inline_error {
   font-size: 1.2rem;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
   background-color: transparent !important;
   color: #ee5252 !important;
   padding: 0.2rem 0 !important;
@@ -3337,7 +3339,7 @@ article.hentry h4 a:hover {
 }
 
 #mce-success-response {
-  color: #00D179 !important;
+  color: #0038d1 !important;
 }
 #mce-success-response:after {
   content: " We'll be in touch soon.";
@@ -3482,7 +3484,7 @@ article.hentry h4 a:hover {
 .pagination span.current,
 .wp-pagenavi span.current {
   color: #ffffff;
-  background-color: #0FA041;
+  background-color: #113fd7;
 }
 .pagination span.extend,
 .wp-pagenavi span.extend {
@@ -3604,16 +3606,16 @@ body.blog_section .blog-header .detail {
 }
 body.blog_section .blog-back {
   margin-left: -0.7em;
-  background-color: rgba(0, 209, 121, 0);
+  background-color: rgba(0, 56, 209, 0);
   color: #5A5A5A;
-  font-weight: 500;
+  font-weight: 400;
 }
 body.blog_section .blog-back .theme-icon {
   font-size: 1em;
 }
 body.blog_section .blog-back:hover {
-  background-color: rgba(0, 209, 121, 0.4);
-  color: #09401C;
+  background-color: rgba(0, 56, 209, 0.4);
+  color: #002078;
 }
 body.blog_section .post-content {
   margin-bottom: 3rem;
@@ -3661,15 +3663,33 @@ body.blog_section .post-header .entry-subtitle {
 }
 .page-default .wp-block-columns {
   width: 90vw;
-  margin: 0 auto;
+  margin: 0 calc( (100vw - 90vw) / 2);
   max-width: 1400px;
 }
 .page-default .wp-block-media-text .wp-block-media-text__content {
   padding: 0 calc( (100vw - 90vw) / 2);
 }
-.page-default .wp-block-separator {
+.page-default > p,
+.page-default > h1,
+.page-default > h2,
+.page-default > h3,
+.page-default > h4,
+.page-default > h5,
+.page-default > h6,
+.page-default > ul,
+.page-default > ol,
+.page-default > pre {
   width: 90vw;
-  margin: 2rem auto;
+  margin: 2rem calc( (100vw - 90vw) / 2);
+  max-width: 800px;
+}
+.page-default > figure {
+  width: 90vw;
+  margin: 2rem calc( (100vw - 90vw) / 2);
+}
+.page-default > .wp-block-separator {
+  width: 90vw;
+  margin: 2rem calc( (100vw - 90vw) / 2);
   max-width: 1400px;
 }
 

@@ -106,10 +106,10 @@ $color-dark-text-muted: $color-gray-30 !default;
 $color-dark-text-light: $color-gray-50 !default;
 $color-dark-brand-primary-bright: #00D179 !default;
 
-$color-brand-primary: #0FA041 !default;
-$color-brand-primary-highlight: #00D179 !default;
-$color-brand-primary-bright: #00D179 !default;
-$color-brand-primary-dark: #09401C !default;
+$color-brand-primary: #113fd7 !default;
+$color-brand-primary-highlight: #0038d1 !default;
+$color-brand-primary-bright: #0038d1 !default;
+$color-brand-primary-dark: #002078 !default;
 
 $color-brand-secondary: #32D28F !default;
 
@@ -122,7 +122,7 @@ $color-error: $red !default;
 
 
 // Fonts
-$font-family-default: 'Libre Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-default: 'Inter', 'Libre Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $font-family-secondary: 'Source Serif Pro', 'Times New Roman', Times, serif !default;
 $font-family-tertiary: $font-family-default !default;
 
@@ -147,8 +147,10 @@ $font-2xl: 3.4rem !default;
 $font-3xl: 4.2rem !default;
 $font-4xl: 5.5rem !default;
 
-$font-weight-default: 500 !default;
+$font-weight-default: 400 !default;
 $font-weight-bold: 700 !default;
+
+$max-line-length: 800px;
 
 
 
