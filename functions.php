@@ -15,6 +15,7 @@ function basetheme_setup() {
 	load_theme_textdomain( 'turnwall', get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
+  // add_theme_support( 'block-templates' );
 
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'basetheme' ),
