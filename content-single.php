@@ -23,9 +23,9 @@
 
           <h1 class="entry-title"><?php the_title(); ?></h1> 
           
-          <?php if (get_field('post_subtitle')) : ?>
-            <p class="entry-subtitle"><?php echo get_field('post_subtitle'); ?></p>
-          <?php endif; ?>
+          <?php //if (get_field('post_subtitle')) : ?>
+            <!-- <p class="entry-subtitle"><?php //echo get_field('post_subtitle'); ?></p> -->
+          <?php //endif; ?>
 
           <?php if ( has_excerpt() ) : // Only show custom excerpts not autoexcerpts ?>
               <span class="entry-subtitle"><?php echo get_the_excerpt(); ?></span>

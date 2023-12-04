@@ -17,7 +17,7 @@ h6 {
 }
 
 .mce-pullquote {
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.3em;
   color: #1A1A1A;
   margin: 1.3em 0em;
@@ -43,7 +43,7 @@ h6 {
 .button {
   padding: 0.8em 1.1em 0.6em;
   text-decoration: none;
-  background-color: #0FA041;
+  background-color: #113fd7;
   color: #ffffff;
   border-radius: 2px;
   background-color: transparent;
@@ -52,7 +52,7 @@ h6 {
   letter-spacing: 0.08em;
   font-size: 1.1em;
   line-height: 100%;
-  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*# sourceMappingURL=editor-style.css.map */

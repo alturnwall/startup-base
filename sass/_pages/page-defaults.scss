@@ -7,16 +7,33 @@
 
     .wp-block-columns {
         width: $container-width;
-        margin: 0 auto;
+        margin: 0 $container-sides;
         max-width: $container-max-width;
     }
     .wp-block-media-text .wp-block-media-text__content {
         padding: 0 $container-sides;
     }
-
-    .wp-block-separator {
+    > p,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    > ul,
+    > ol,
+    > pre {
         width: $container-width;
-        margin: 2rem auto;
+        margin: 2rem $container-sides;
+        max-width: $max-line-length;
+    }
+    > figure {
+      width: $container-width;
+      margin: 2rem $container-sides;
+  }
+    > .wp-block-separator {
+        width: $container-width;
+        margin: 2rem $container-sides;
         max-width: $container-max-width;
     }
 }
